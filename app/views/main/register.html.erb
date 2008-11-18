@@ -1,13 +1,14 @@
+<% @title = 'Register for Fuzzage' %>
 <%= error_messages_for 'user' %>
 <h1>Register</h1>
 <% form_for(@user, :url => { :action => "register" }) do |f| %>
     <p>name<br/>
-        <%= text_field "user", "name", "maxlength" => 100, "size" => 20 %></p>
+        <%= text_field "user", "name", "maxlength" => 100, "size" => 20, :id => "user_name" %></p>
     <p>email address<br/>
-        <%= text_field "user", "email", "maxlength" => 50, "size" => 20 %></p>
+        <%= text_field "user", "email", "maxlength" => 50, "size" => 20, :id => "user_email" %></p>
     <p>password<br/>
-        <%= password_field "user", "password", "maxlength" => 20, "size" => 20 %></p>
+        <%= password_field "user", "password", "maxlength" => 20, "size" => 20 , :id => "user_password"%></p>
     <p>confirm password<br/>
-        <%= password_field "user", "confirm_password", "maxlength" => 20, "size" => 20 %></p>
-    <p><input type="submit" value="sign up"/></p>
+        <%= password_field "user", "confirm_password", "maxlength" => 20, "size" => 20 , :id => "user_password_confirm"%></p>
+    <p><input type="submit" value="sign up" id="submit"/></p>
 <% end %>

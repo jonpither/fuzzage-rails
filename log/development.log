@@ -818,3 +818,105 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.000386)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
   [4;35;1mSQL (0.000616)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
   [4;36;1mSQL (0.000592)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-18 20:28:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"resultsUrl"=>"postResults/firefox(3).yml", "auto"=>"true", "multiWindow"=>"false", "test"=>"tests", "baseUrl"=>"http://localhost:3000/"}
+
+
+ActionController::RoutingError (No route matches "/selenium/TestRunner.html" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000244)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000417)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001184)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001076)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001031)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001170)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001167)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001035)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.149624)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000474)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000254)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000234)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000656)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.012103)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000700)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005006)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000726)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005902)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008947)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000798)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000691)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000817)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.001303)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000451)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000254)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000334)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000455)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001227)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001185)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001105)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001229)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001271)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001077)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.137084)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000256)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000398)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.019030)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006381)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000478)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.007003)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.010332)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000493)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000490)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000738)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000555)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m

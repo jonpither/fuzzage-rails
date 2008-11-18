@@ -1,0 +1,42 @@
+open '/selenium/setup?fixtures=all'
+
+open '/'
+
+click_and_wait 'register'
+assert_title 'Register for Fuzzage'
+
+# Happy Path:
+
+type 'user_name', 'Bob'
+type 'user_email', 'foo@foo.com'
+type 'user_password', 'password'
+type 'user_password_confirm', 'password'
+click_and_wait 'submit'
+
+assert_title 'Welcome to Fuzzage'
+assert_text_present "Thank you for registering! We have sent a confirmation email to foo@foo.com with instructions on how to validate your account."
+
+# Validation:
+
+click_and_wait 'register'
+click_and_wait 'submit'
+
+assert_text_present "3 errors prohibited this user from being saved"
+assert_text_present "Email can't be blank"
+assert_text_present "Password can't be blank"
+assert_text_present "Name can't be blank"
+
+type 'user_name', 'B'
+type 'user_password', 'password'
+type 'user_email', 'doh!'
+click_and_wait 'submit'
+
+assert_text_present "3 errors prohibited this user from being saved"
+assert_text_present "Confirm password does not match"
+assert_text_present "Email must be a valid format"
+assert_text_present "Name is too short (minimum is 2 characters)"
+
+
+
+
+
