@@ -1,0 +1,366 @@
+Script started on Tue 18 Nov 2008 11:45:15 GMT
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzage/vendor/plugins/selenium-on-railsjpither@jpither-laptop:~/work/ruby/fuzzage/vendor/plugins/selenium-on-rails$ scr ipt/[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K cd [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kcd  ..
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzage/vendor/pluginsjpither@jpither-laptop:~/work/ruby/fuzzage/vendor/plugins$ cd ..
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzage/vendorjpither@jpither-laptop:~/work/ruby/fuzzage/vendor$ cd ..
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ cd ..sudo work/rubymine472/bin/rubymine.shh [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pwork/rubymine472/bin/rubymine.sh 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kexport JDK_HOME=/usr/lib/jvm/java-6-ssun-1.6.0.10[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/usr/lib/jvm/java-6-sun-1.6.0.10/ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22Pecho $JDK_HOME
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls /usr/lib/jvm/java-6-sun-1.6.0.06/bbin/java:[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjava[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Kscript /[K[K/ghe[K[Kenerate selenium crud_season s[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[Kadmin_seaso ns
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Gem::SourceIndex#search support for Regexp patterns is deprecated
+/home/jpither/work/ruby/fuzzage/vendor/rails/railties/lib/rails_generator/lookup.rb:211:in `each' is outdated
+      create  test/selenium
+      create  test/selenium/admin_seasons.sel
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake selenkumn[K[K[K[Kium
+(in /home/jpither/work/ruby/fuzzage)
+rake aborted!
+Don't know how to build task 'selenium'
+
+(See full trace by running task with --trace)
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake help
+(in /home/jpither/work/ruby/fuzzage)
+rake aborted!
+Don't know how to build task 'help'
+
+(See full trace by running task with --trace)
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake help[C[C[C[C[K[K[K[K
+(in /home/jpither/work/ruby/fuzzage)
+
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/unit/season_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+....
+Finished in 0.041085 seconds.
+
+4 tests, 4 assertions, 0 failures, 0 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/functional/seasons_controller_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+.......
+Finished in 0.088689 seconds.
+
+7 tests, 13 assertions, 0 failures, 0 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb"  
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ 
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake tret[K[K[Kests:[K[KL[K:accpt[K[Keptance
+(in /home/jpither/work/ruby/fuzzage)
+rake aborted!
+no browser specified, edit/create config.yml
+
+(See full trace by running task with --trace)
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ cd config/
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzage/configjpither@jpither-laptop:~/work/ruby/fuzzage/config$ ks[K=[Kls[K[K[Kls
+[00m[01;32mboot.rb[00m  [01;32mdatabase.yml[00m  [01;32menvironment.rb[00m  [34;42menvironments[00m  [34;42minitializers[00m  [01;32mroutes.rb[00m
+[m]0;jpither@jpither-laptop: ~/work/ruby/fuzzage/configjpither@jpither-laptop:~/work/ruby/fuzzage/config$ ls[K[Kcd ..
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ cd ..[3Plscd config/rake test:acceptance
+(in /home/jpither/work/ruby/fuzzage)
+
+Starting firefox
+"/usr/bin/firefox" "http://localhost:3000/selenium/TestRunner.html?test=tests&auto=true&baseUrl=http://localhost:3000/&resultsUrl=postResults/firefox.yml&multiWindow=false"
+..
+Stopping browser (pid=20480) ...
+Finished in 0 seconds.
+
+1 tests passed, 0 tests failed
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake
+(in /home/jpither/work/ruby/fuzzage)
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/unit/season_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+....
+Finished in 0.044109 seconds.
+
+4 tests, 4 assertions, 0 failures, 0 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/functional/seasons_controller_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+.......
+Finished in 0.090385 seconds.
+
+7 tests, 13 assertions, 0 failures, 0 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb"  
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake [K routes
+(in /home/jpither/work/ruby/fuzzage)
+              seasons GET    /seasons                         {:action=>"index", :controller=>"seasons"}
+    formatted_seasons GET    /seasons.:format                 {:action=>"index", :controller=>"seasons"}
+                      POST   /seasons                         {:action=>"create", :controller=>"seasons"}
+                      POST   /seasons.:format                 {:action=>"create", :controller=>"seasons"}
+           new_season GET    /seasons/new                     {:action=>"new", :controller=>"seasons"}
+ formatted_new_season GET    /seasons/new.:format             {:action=>"new", :controller=>"seasons"}
+          edit_season GET    /seasons/:id/edit                {:action=>"edit", :controller=>"seasons"}
+formatted_edit_season GET    /seasons/:id/edit.:format        {:action=>"edit", :controller=>"seasons"}
+               season GET    /seasons/:id                     {:action=>"show", :controller=>"seasons"}
+     formatted_season GET    /seasons/:id.:format             {:action=>"show", :controller=>"seasons"}
+                      PUT    /seasons/:id                     {:action=>"update", :controller=>"seasons"}
+                      PUT    /seasons/:id.:format             {:action=>"update", :controller=>"seasons"}
+                      DELETE /seasons/:id                     {:action=>"destroy", :controller=>"seasons"}
+                      DELETE /seasons/:id.:format             {:action=>"destroy", :controller=>"seasons"}
+                             /register                        {:action=>"register", :controller=>"main"}
+                             /confirm_email/:hash             {:action=>"confirm_email", :controller=>"main"}
+                             /                                {:action=>"index", :controller=>"main"}
+                             /:controller/:action/:id         
+                             /:controller/:action/:id.:format 
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ [Kjpither@jpither-laptop:~/work/ruby/fuzzage$ rake routes
+(in /home/jpither/work/ruby/fuzzage)
+              seasons GET    /seasons                         {:action=>"index", :controller=>"seasons"}
+    formatted_seasons GET    /seasons.:format                 {:action=>"index", :controller=>"seasons"}
+                      POST   /seasons                         {:action=>"create", :controller=>"seasons"}
+                      POST   /seasons.:format                 {:action=>"create", :controller=>"seasons"}
+           new_season GET    /seasons/new                     {:action=>"new", :controller=>"seasons"}
+ formatted_new_season GET    /seasons/new.:format             {:action=>"new", :controller=>"seasons"}
+          edit_season GET    /seasons/:id/edit                {:action=>"edit", :controller=>"seasons"}
+formatted_edit_season GET    /seasons/:id/edit.:format        {:action=>"edit", :controller=>"seasons"}
+               season GET    /seasons/:id                     {:action=>"show", :controller=>"seasons"}
+     formatted_season GET    /seasons/:id.:format             {:action=>"show", :controller=>"seasons"}
+                      PUT    /seasons/:id                     {:action=>"update", :controller=>"seasons"}
+                      PUT    /seasons/:id.:format             {:action=>"update", :controller=>"seasons"}
+                      DELETE /seasons/:id                     {:action=>"destroy", :controller=>"seasons"}
+                      DELETE /seasons/:id.:format             {:action=>"destroy", :controller=>"seasons"}
+                             /register                        {:action=>"register", :controller=>"main"}
+                             /confirm_email/:hash             {:action=>"confirm_email", :controller=>"main"}
+                             /                                {:action=>"index", :controller=>"main"}
+                             /:controller/:action/:id         
+                             /:controller/:action/:id.:format 
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ cat config/routes.rb 
+ActionController::Routing::Routes.draw do |map|
+  map.resources :seasons
+
+  # The priority is based upon order of creation: first created -> highest priority.
+
+  # Sample of regular route:
+  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
+  # Keep in mind you can assign values other than :controller and :action
+
+  # Sample of named route:
+  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   map.resources :products
+
+  # Sample resource route with options:
+  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
+
+  # Sample resource route with sub-resources:
+  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+  
+  # Sample resource route with more complex sub-resources
+  #   map.resources :products do |products|
+  #     products.resources :comments
+  #     products.resources :sales, :collection => { :recent => :get }
+  #   end
+
+  # Sample resource route within a namespace:
+  #   map.namespace :admin do |admin|
+  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+  #     admin.resources :products
+  #   end
+
+  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
+  # map.root :controller => "welcome"
+
+  # See how all your routes lay out with "rake routes"
+
+  map.connect 'register', :controller => "main", :action => "register"
+  map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
+  map.connect '', :controller => "main", :action => "index"
+
+  # Install the default routes as the lowest priority.
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
+end
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ cat config/routes.rb [10Prake routes[K test:acceptancecd ..[Krake test:acceptance[K routescat config/routes.rb [Kcat config/routes.rb [10Prake routes[K test:acceptancecd ..[K[3Plscd config/rake test:acceptance[Khelpselenium[4Phelp[Ktest:acceptance[10Pcd config/[Kjpither@jpither-laptop:~/work/ruby/fuzzage$ cd config/[Kjpither@jpither-laptop:~/work/ruby/fuzzage$ cd config/[K[K[K[K[K[K[K[K[K[Krake
+(in /home/jpither/work/ruby/fuzzage)
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/unit/season_test.rb" "test/unit/user_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+.....
+Finished in 0.045317 seconds.
+
+5 tests, 5 assertions, 0 failures, 0 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb" "test/functional/main_controller_test.rb" "test/functional/seasons_controller_test.rb" 
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+Loaded suite /usr/lib/ruby/1.8/rake/rake_test_loader
+Started
+E"here namebastard"
+.......
+Finished in 0.12182 seconds.
+
+  1) Error:
+test_truth(MainControllerControllerTest):
+ActionController::NonInferrableControllerError: Unable to determine the controller to test from MainControllerControllerTest. You'll need to specify it using 'tests YourController' in your test case definition. This could mean that MainControllerController does not exist or it contains syntax errors
+    /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/test_case.rb:64:in `determine_default_controller_class'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/test_case.rb:57:in `controller_class'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/test_case.rb:73:in `setup_controller_request_and_response'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:90:in `run'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:90:in `each'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:90:in `send'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:90:in `run'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/callbacks.rb:272:in `run_callbacks'
+    /home/jpither/work/ruby/fuzzage/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/testing/setup_and_teardown.rb:65:in `run'
+
+8 tests, 13 assertions, 0 failures, 1 errors
+/usr/bin/ruby1.8 -Ilib:test "/usr/lib/ruby/1.8/rake/rake_test_loader.rb"  
+Errors running test:functionals!
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake spec
+(in /home/jpither/work/ruby/fuzzage)
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+  <error>Name can't be blank</error>
+</errors>
+nil
+[35mF[0m
+
+1)
+[35mNoMethodError in 'A user (in general) should be invalid without a name'
+undefined method `name=' for #<User:0xb72540d8>[0m
+./spec/models/user_spec.rb:15:
+
+Finished in 0.136967 seconds
+
+[31m1 example, 1 failure[0m
+rake aborted!
+Command /usr/bin/ruby1.8 -I"/usr/lib/ruby/gems/1.8/gems/rspec-1.1.9/lib"  "/usr/lib/ruby/gems/1.8/gems/rspec-1.1.9/bin/spec" "spec/models/user_spec.rb" --options "/home/jpither/work/ruby/fuzzage/spec/spec.opts" failed
+
+(See full trace by running task with --trace)
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake spec[Kcat config/routes.rb [10Prake routes[K test:acceptance[K routescat config/routes.rb rake[K spec[Krake spec[Kcat config/routes.rb [10Prake routes[K test:acceptancecd ..[K[3Plscd config/rake test:acceptance[Khelp[K[K[K[KRAILS_EVN[K[KNV=test db:reset db:migrate
+(in /home/jpither/work/ruby/fuzzage)
+-- create_table("seasons", {:force=>true})
+   -> 0.0087s
+-- create_table("users", {:force=>true})
+   -> 0.0041s
+-- initialize_schema_migrations_table()
+   -> 0.0187s
+-- assume_migrated_upto_version(20081118140506)
+   -> 0.0020s
+Loaded suite /usr/bin/rake
+Started
+
+Finished in 0.000238 seconds.
+
+0 tests, 0 assertions, 0 failures, 0 errors
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake RAILS_ENV=test db:reset db:migrate[C[C[C[1P[1P[1P[1P[1@p[1@r[1@o[1@d[1@u[1@c[1@t[1@i[1@o[1@n
+(in /home/jpither/work/ruby/fuzzage)
+-- create_table("seasons", {:force=>true})
+   -> 0.0074s
+-- create_table("users", {:force=>true})
+   -> 0.0070s
+-- initialize_schema_migrations_table()
+   -> 0.0169s
+-- assume_migrated_upto_version(20081118140506)
+   -> 0.0030s
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake RAILS_ENV=production db:reset db:migrate[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@d[1@e[1@v
+(in /home/jpither/work/ruby/fuzzage)
+rake aborted!
+No such file or directory - /home/jpither/work/ruby/fuzzage/config/environments/dev.rb
+
+(See full trace by running task with --trace)
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake RAILS_ENV=dev db:reset db:migrate[1@e[1@v[1@e[1@l[1@o[1@p[1P[1P[1P[1P[1P[1P[1P[1@v[1@e[1@l[1@o[1@p[1@m[1@n[1@e[1@n[1@t[1P[1P[1P[1P[1@e[1@n[1@t
+(in /home/jpither/work/ruby/fuzzage)
+-- create_table("seasons", {:force=>true})
+   -> 0.0113s
+-- create_table("users", {:force=>true})
+   -> 0.0076s
+-- initialize_schema_migrations_table()
+   -> 0.0115s
+-- assume_migrated_upto_version(20081118140506)
+   -> 0.0022s
+]0;jpither@jpither-laptop: ~/work/ruby/fuzzagejpither@jpither-laptop:~/work/ruby/fuzzage$ rake RAILS_ENV=development db:reset db:migrate[8P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@production[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Ptest[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cspec[K
+(in /home/jpither/work/ruby/fuzzage)
+/usr/lib/ruby/1.8/xmlsimple.rb:275: warning: already initialized constant KNOWN_OPTIONS
+/usr/lib/ruby/1.8/xmlsimple.rb:280: warning: already initialized constant DEF_KEY_ATTRIBUTES
+/usr/lib/ruby/1.8/xmlsimple.rb:281: warning: already initialized constant DEF_ROOT_NAME
+/usr/lib/ruby/1.8/xmlsimple.rb:282: warning: already initialized constant DEF_CONTENT_KEY
+/usr/lib/ruby/1.8/xmlsimple.rb:283: warning: already initialized constant DEF_XML_DECLARATION
+/usr/lib/ruby/1.8/xmlsimple.rb:284: warning: already initialized constant DEF_ANONYMOUS_TAG
+/usr/lib/ruby/1.8/xmlsimple.rb:285: warning: already initialized constant DEF_FORCE_ARRAY
+/usr/lib/ruby/1.8/xmlsimple.rb:286: warning: already initialized constant DEF_INDENTATION
+/usr/lib/ruby/1.8/xmlsimple.rb:287: warning: already initialized constant DEF_KEY_TO_SYMBOL
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+  <error>Name can't be blank</error>
+</errors>
+nil
+[35mF[0m
+
+1)
+[35mNoMethodError in 'A user (in general) should be invalid without a name'
+undefined method `name=' for #<User:0xb72b0b08>[0m
+./spec/models/use

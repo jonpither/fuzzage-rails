@@ -1,0 +1,27 @@
+open '/selenium/setup?fixtures=all'
+
+open '/seasons'
+
+#Assert back button:
+
+click_and_wait 'newSeason'
+click_and_wait 'back'
+assert_title 'List of Seasons'
+
+#Assert adding a season:
+
+click_and_wait 'newSeason'
+assert_title 'New Season'
+type 'css=#season_name', '2008 season of triumph'
+click_and_wait 'submit'
+
+#Assert success page
+
+assert_title 'Season: 2008 season of triumph'
+assert_text_present 'Season was successfully created.'
+click_and_wait 'back'
+
+#Assert that the new season exists in a list:
+
+assert_title 'List of Seasons'
+assert_text_present '2008 season of triumph'

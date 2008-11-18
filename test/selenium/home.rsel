@@ -1,0 +1,4 @@
+open '/selenium/setup?fixtures=all'
+
+open '/'
+assert_title 'Welcome to Fuzzage'

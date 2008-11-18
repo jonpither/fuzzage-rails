@@ -1,0 +1,15 @@
+<% @title = "Editing Season: #{@season.name}" %>
+<h1>Editing season</h1>
+
+<% form_for(@season) do |f| %>
+    <%= f.error_messages %>
+    <p>
+        <label for="season_name">Name</label><br/>
+        <%= text_field 'season', 'name', :id=> 'season_name' %>
+    </p>
+    <p>
+        <%= f.submit "Update", :id=>'submit' %>
+    </p>
+<% end %>
+
+<%= link_to 'Back', seasons_path, :id=>'back' %>

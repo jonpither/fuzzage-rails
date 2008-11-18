@@ -1,0 +1,11 @@
+open '/selenium/setup?fixtures=all'
+
+open '/seasons'
+
+# DELETE A SEASON:
+
+assert_text_present 'test badass season'
+
+click_and_wait 'delete_season_1'
+assert_confirmation 'Are you sure?'
+assert_text_not_present 'test badass season'

@@ -1,0 +1,11 @@
+open '/selenium/setup?fixtures=all'
+
+open '/seasons'
+
+click_and_wait 'view_season_1'
+assert_title 'Season: test badass season'
+assert_text_present 'test badass season'
+
+# Test back button:
+click_and_wait 'back'
+assert_title 'List of Seasons'

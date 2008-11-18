@@ -1,0 +1,29 @@
+open '/selenium/setup?fixtures=all'
+
+open '/seasons'
+
+#Assert back button:
+
+click_and_wait 'edit_season_1'
+click_and_wait 'back'
+assert_title 'List of Seasons'
+
+#Assert editing a season:
+
+click_and_wait 'edit_season_1'
+assert_title 'Editing Season: test badass season'
+
+assert_value 'css=#season_name', 'test badass season'
+type 'css=#season_name', 'Foo season'
+click_and_wait 'submit'
+
+#Assert success page
+
+assert_title 'Season: Foo season'
+assert_text_present 'Season was successfully updated.'
+click_and_wait 'back'
+
+#Assert that the new season exists in a list:
+
+assert_title 'List of Seasons'
+assert_text_present 'Foo season'
