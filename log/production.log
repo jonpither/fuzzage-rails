@@ -1,0 +1,369 @@
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-18 21:24:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiAX5UaGFuayB5b3UgZm9yIHJlZ2lzdGVyaW5nISBX
+ZSBoYXZlIHNlbnQgYSBjb25maXJtYXRpb24gZW1haWwgdG8gc2FkQHNhZC5j
+b20gd2l0aCBpbnN0cnVjdGlvbnMgb24gaG93IHRvIHZhbGlkYXRlIHlvdXIg
+YWNjb3VudC4GOgpAdXNlZHsGOwZU--3bb519787030a7ba75971e8a2081d9466b405e16
+  Parameters: {"action"=>"index", "controller"=>"main"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.01597 (62 reqs/sec) | Rendering: 0.01365 (85%) | DB: 0.00034 (2%) | 200 OK [http://localhost/]
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-18 21:24:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"register", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/register
+
+
+ActionView::TemplateError (undefined method `name' for #<User:0xb752995c>) on line #6 of main/register.html.erb:
+3: <h1>Register</h1>
+4: <% form_for(@user, :url => { :action => "register" }) do |f| %>
+5:     <p>name<br/>
+6:         <%= text_field "user", "name", "maxlength" => 100, "size" => 20, :id => "user_name" %></p>
+7:     <p>email address<br/>
+8:         <%= text_field "user", "email", "maxlength" => 50, "size" => 20, :id => "user_email" %></p>
+9:     <p>password<br/>
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:624:in `send'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:624:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:612:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:535:in `to_input_field_tag'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:358:in `text_field'
+    app/views/main/register.html.erb:6:in `_run_erb_47app47views47main47register46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/main/register.html.erb:4:in `_run_erb_47app47views47main47register46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-18 21:24:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--0e5a50bc0e7f21b3a4b97f9260d26ad461f9f53d
+  Parameters: {"action"=>"register", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/register
+
+
+ActionView::TemplateError (undefined method `name' for #<User:0xb6aa01d4>) on line #6 of main/register.html.erb:
+3: <h1>Register</h1>
+4: <% form_for(@user, :url => { :action => "register" }) do |f| %>
+5:     <p>name<br/>
+6:         <%= text_field "user", "name", "maxlength" => 100, "size" => 20, :id => "user_name" %></p>
+7:     <p>email address<br/>
+8:         <%= text_field "user", "email", "maxlength" => 50, "size" => 20, :id => "user_email" %></p>
+9:     <p>password<br/>
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:624:in `send'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:624:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:612:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:535:in `to_input_field_tag'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:358:in `text_field'
+    app/views/main/register.html.erb:6:in `_run_erb_47app47views47main47register46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/main/register.html.erb:4:in `_run_erb_47app47views47main47register46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-18 21:24:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--0e5a50bc0e7f21b3a4b97f9260d26ad461f9f53d
+  Parameters: {"action"=>"register", "controller"=>"main"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+Rendering template within layouts/standard
+Rendering main/register
+Completed in 0.01961 (50 reqs/sec) | Rendering: 0.00841 (42%) | DB: 0.00204 (10%) | 200 OK [http://localhost/register]
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-18 21:24:48) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--0e5a50bc0e7f21b3a4b97f9260d26ad461f9f53d
+  Parameters: {"authenticity_token"=>"9e740a98ad53d6b398b7e7ed717891632aa66a46", "action"=>"register", "controller"=>"main", "user"=>{"name"=>"Jon", "confirm_password"=>"foo", "password"=>"foo", "email"=>"jon.pither@gmail.com"}}
+Sent mail to jon.pither@gmail.com
+Redirected to http://localhost:3000/main
+Completed in 60.48048 (0 reqs/sec) | DB: 0.00483 (0%) | 302 Found [http://localhost/register]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-18 21:25:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHRg==--dd92e0efde14b9f0e776e1c7bbdf970cadc4f1a8
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00229 (436 reqs/sec) | Rendering: 0.00211 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-18 21:26:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHVA==--7156925d5a0a88f73f5dd1c35eb8299f59255191
+  Parameters: {"authenticity_token"=>"9e740a98ad53d6b398b7e7ed717891632aa66a46", "action"=>"register", "controller"=>"main", "user"=>{"name"=>"Jon", "confirm_password"=>"foo", "password"=>"foo", "email"=>"jon.pither@gmail.com"}}
+Sent mail to jon.pither@gmail.com
+Redirected to http://localhost:3000/main
+Completed in 60.39309 (0 reqs/sec) | DB: 0.00713 (0%) | 302 Found [http://localhost/register]
+
+
+Processing MainController#confirm_email (for 127.0.0.1 at 2008-11-18 21:27:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHVA==--7156925d5a0a88f73f5dd1c35eb8299f59255191
+  Parameters: {"hash"=>"f3642c9186917ee0813d5a59d77ffaff4b3b6dd3", "action"=>"confirm_email", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/confirm_email
+
+
+ActionView::MissingTemplate (Missing template main/confirm_email.html.erb in view path /home/jpither/work/ruby/fuzzage/app/views):
+    /vendor/rails/actionpack/lib/action_view/template.rb:85:in `raise_missing_template_exception'
+    /vendor/rails/actionpack/lib/action_view/template.rb:78:in `set_extension_and_file_name'
+    /vendor/rails/actionpack/lib/action_view/template.rb:15:in `initialize'
+    /vendor/rails/actionpack/lib/action_view/base.rb:245:in `new'
+    /vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-18 21:27:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzI5NDY4NWUyMDA2Yzc1OTNhNjYwZDJmMGY0MmI3
+OGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHRg==--dd92e0efde14b9f0e776e1c7bbdf970cadc4f1a8
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00226 (442 reqs/sec) | Rendering: 0.00203 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-18 21:55:51) [GET]
+  Session ID: 29c8a0047b4f5fcffc60f8ceb4872de6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/selenium/TestRunner.html" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
