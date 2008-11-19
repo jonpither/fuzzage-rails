@@ -54,6 +54,12 @@ class MainController < ApplicationController
         end
     end
 
+    def logout
+        session[:user_id] = nil
+        flash[:notice] = "Logged out"
+        redirect_to(:action => 'index')
+    end
+
     private
 
     def confirmation_hash(string)

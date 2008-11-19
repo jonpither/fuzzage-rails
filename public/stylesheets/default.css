@@ -46,7 +46,7 @@ h3 {
 }
 
 p, ol, ul {
-	margin-bottom: 2em;
+	/*margin-bottom: 2em;*/
 	line-height: 200%;
 }
 
@@ -142,7 +142,7 @@ a:hover {
 /* Page */
 
 #page {
-	padding: 40px 60px 0 60px;
+	padding: 5px 60px 0 60px;
 }
 
 /* Content */

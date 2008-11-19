@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'home', :controller => "home", :action => "index"
   map.connect 'register', :controller => "main", :action => "register"
   map.connect 'login', :controller => "main", :action => "login"
+  map.connect 'logout', :controller => "main", :action => "logout"
   map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
   map.connect '', :controller => "main", :action => "index"
 

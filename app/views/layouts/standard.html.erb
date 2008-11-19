@@ -11,11 +11,11 @@
 <!-- start header -->
 <div id="header">
     <div id="logo">
-        <h1><a href="#">Fuzzage</a></h1>
+        <h1><%= link_to "Fuzzage", { :controller => "main", :action => "index"}, {:id=> "home"} %></h1>
     </div>
     <div id="menu">
         <ul>
-            <li class="current_page_item"><a href="/">Home</a></li>
+            <li class="current_page_item"><%= link_to "Dashboard", { :controller => "home", :action => "index"}, {:id=> "dashboard"} %></li>
             <li><a href="#">Table</a></li>
             <li><a href="#">Fixtures</a></li>
             <li><a href="#">Account</a></li>
@@ -32,7 +32,7 @@
                 <li id="categories">
                     <ul>
                         <h2>You are logged in.</h2>
-                        <li><a href="#">Logout</a></li>
+                        <li><%= link_to "Logout", { :controller => "main", :action => "logout"}, {:id=> "logout"} %></li>
                     </ul>
                 </li>
             </ul>

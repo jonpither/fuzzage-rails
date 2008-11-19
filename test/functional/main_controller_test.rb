@@ -71,6 +71,7 @@ class MainControllerTest < ActionController::TestCase
         #Then
         assert_redirected_to :action => "index"
         assert_equal 4, session.data["user_id"]
+#        session.data["user_id"]=nil
     end
 
     def test_unsuccessful_login
@@ -87,6 +88,15 @@ class MainControllerTest < ActionController::TestCase
         #Then
         assert_response :success
         assert_equal '', user.password
+        assert_nil session.data["user_id"]
+    end
+
+   def test_logout
+        #when
+        get :logout
+
+        #Then
+        assert_redirected_to :action => "index"
         assert_nil session.data["user_id"]
     end
 end

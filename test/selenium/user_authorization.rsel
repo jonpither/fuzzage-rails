@@ -1,0 +1,21 @@
+open '/selenium/setup?fixtures=all'
+
+open '/'
+
+click_and_wait 'dashboard'
+assert_title 'Login to Fuzzage'
+
+type 'user_email', 'evil@darktower.com'
+type 'user_password', 'mypassword'
+click_and_wait 'submit'
+
+assert_title 'Fuzzage Dashboard'
+click_and_wait 'dashboard'
+assert_title 'Fuzzage Dashboard'
+
+click_and_wait 'logout'
+assert_title 'Welcome to Fuzzage'
+assert_text_present 'Logged out'
+
+click_and_wait 'dashboard'
+assert_title 'Login to Fuzzage'

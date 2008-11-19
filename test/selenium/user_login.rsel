@@ -11,7 +11,7 @@ type 'user_email', 'evil@darktower.com'
 type 'user_password', 'mypassword'
 click_and_wait 'submit'
 
-assert_title 'Welcome to Fuzzage'
+assert_title 'Fuzzage Dashboard'
 assert_text_present "Welcome Plonder. You are logged in."
 
 # Validation:
