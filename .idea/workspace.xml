@@ -2,15 +2,7 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/selenium/user_login.rsel" afterPath="$PROJECT_DIR$/test/selenium/user_login.rsel" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/main_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/main_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/cruise.rake" afterPath="$PROJECT_DIR$/lib/tasks/cruise.rake" />
     </list>
     <ignored path="fuzzage.iws" />
@@ -65,10 +57,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_login.rsel" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_login.rsel" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/selenium/user_login.rsel">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="32" selection-start="656" selection-end="656" vertical-scroll-proportion="0.65909094">
+            <state line="29" column="32" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cruise.rake" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/cruise.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="18" selection-start="509" selection-end="509" vertical-scroll-proportion="0.47727272">
               <folding />
             </state>
           </provider>
@@ -215,6 +216,24 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="spec" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="fuzzage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="fuzzage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="lib" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="tasks" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -612,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/cruise.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="10" selection-start="501" selection-end="501" vertical-scroll-proportion="0.47727272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/login.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="301" selection-end="301" vertical-scroll-proportion="-4.7727275">
@@ -691,7 +703,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/selenium/user_login.rsel">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="32" selection-start="656" selection-end="656" vertical-scroll-proportion="0.65909094">
+        <state line="29" column="32" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/cruise.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="18" selection-start="509" selection-end="509" vertical-scroll-proportion="0.47727272">
           <folding />
         </state>
       </provider>

@@ -19,7 +19,6 @@ end
 task :cruise=> %w[
   test:reset_test_database
   test:units
-  test:spec
   test:functionals
   test:integration
   test:stop_mongrel
