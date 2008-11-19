@@ -30,4 +30,23 @@ class MainControllerTest < ActionController::TestCase
     #Then:
     assert_redirected_to :action => "index"
   end
+
+  def test_confirm_user_from_hashed_name
+      # Given:
+      user1 = User.new({:name=>'bobmarley'})
+      user2 = User.new({:name=>'bobmarley2'})
+      stubbed_users = [user1, user2]
+      User.expects(:find).with(:all).returns(stubbed_users)
+
+      Digest::SHA1.expects(:hexdigest).with("bobmarleysecret word").returns("hash1")
+      Digest::SHA1.expects(:hexdigest).with("bobmarley2secret word").returns("hash2")
+
+      user2.expects(:update_attributes).with({:email_confirmed => true})
+
+      #When:
+      post :confirm_email, :hash => 'hash2'
+
+      #Then
+      assert_redirected_to :action => "index"
+  end
 end
