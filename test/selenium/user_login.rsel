@@ -7,9 +7,31 @@ assert_title 'Login to Fuzzage'
 
 # Happy Path:
 
-type 'user_email', 'foo@foo.com'
+type 'user_email', 'evil@darktower.com'
 type 'user_password', 'mypassword'
 click_and_wait 'submit'
 
 assert_title 'Welcome to Fuzzage'
-assert_text_present "Welcome back Plonder. You are logged in."
+assert_text_present "Welcome Plonder. You are logged in."
+
+# Validation:
+
+open '/'
+click_and_wait 'login'
+assert_title 'Login to Fuzzage'
+
+type 'user_email', 'evil@darktower.com'
+type 'user_password', 'rubbish'
+click_and_wait 'submit'
+
+assert_title 'Login to Fuzzage'
+assert_text_present "Invalid user/password combination"
+assert_value 'user_email', 'evil@darktower.com'
+assert_value 'user_password', ''
+
+type 'user_email', 'rubbish'
+type 'user_password', 'mypassword'
+click_and_wait 'submit'
+
+assert_title 'Login to Fuzzage'
+assert_text_present "Invalid user/password combination"

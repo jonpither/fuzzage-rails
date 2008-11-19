@@ -39,8 +39,10 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
 
   map.connect 'register', :controller => "main", :action => "register"
+  map.connect 'login', :controller => "main", :action => "login"
   map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
-  map.connect '', :controller => "main", :action => "index" 
+  map.connect '', :controller => "main", :action => "index"
+
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'

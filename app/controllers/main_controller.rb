@@ -41,6 +41,15 @@ class MainController < ApplicationController
             @user = User.new
         else
             @user = User.new(params[:user])
+            logged_in_user = @user.try_to_login
+
+            if logged_in_user
+                flash[:notice] = "Welcome #{logged_in_user.name}. You are logged in."
+                redirect_to(:action => "index")
+            else
+                @user.password = ''
+                flash[:notice] = "Invalid user/password combination"
+            end
         end
     end
 

@@ -6,8 +6,8 @@
    hashed_password: foo
    email_confirmed: false
 
- unconfirmed_user:
+ confirmed_user:
    name: Plonder
    email: evil@darktower.com
-   hashed_password: d3b8b11522ef4de10fd1ec8f773ad85f5641f425
+   hashed_password: 91dfd9ddb4198affc5c194cd8ce6d338fde470e2"
    email_confirmed: true

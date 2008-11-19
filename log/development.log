@@ -1010,3 +1010,63 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.000670)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
   [4;35;1mSQL (0.000723)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
   [4;36;1mSQL (0.000926)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000501)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000273)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000371)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000511)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001390)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001423)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001278)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001539)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001492)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001294)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000128)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.035835)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000314)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000638)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.011911)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000480)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003597)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000520)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003374)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006166)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000613)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000664)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.014780)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000533)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000264)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000351)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000484)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001300)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001305)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001208)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001409)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001394)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001188)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.050271)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000284)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.016409)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000510)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005935)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000512)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003343)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006525)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000518)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000978)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000750)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.001549)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
