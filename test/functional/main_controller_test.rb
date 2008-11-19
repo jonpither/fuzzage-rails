@@ -60,7 +60,8 @@ class MainControllerTest < ActionController::TestCase
         user_args = {'email' => 'foo@foo.com', 'password' => 'pass'}
         user = User.new()
         user_in_db = User.new()
-        
+        user_in_db.id=4
+
         User.expects(:new).with(user_args).returns(user)
         user.expects(:try_to_login).returns(user_in_db)
 
@@ -69,6 +70,7 @@ class MainControllerTest < ActionController::TestCase
 
         #Then
         assert_redirected_to :action => "index"
+        assert_equal 4, session.data["user_id"]
     end
 
     def test_unsuccessful_login
@@ -85,5 +87,6 @@ class MainControllerTest < ActionController::TestCase
         #Then
         assert_response :success
         assert_equal '', user.password
+        assert_nil session.data["user_id"]
     end
 end

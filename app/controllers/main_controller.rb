@@ -44,8 +44,9 @@ class MainController < ApplicationController
             logged_in_user = @user.try_to_login
 
             if logged_in_user
+                session[:user_id] = logged_in_user.id
                 flash[:notice] = "Welcome #{logged_in_user.name}. You are logged in."
-                redirect_to(:action => "index")
+                redirect_to(:controller => "home", :action => "index")
             else
                 @user.password = ''
                 flash[:notice] = "Invalid user/password combination"

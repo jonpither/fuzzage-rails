@@ -9,5 +9,11 @@
  confirmed_user:
    name: Plonder
    email: evil@darktower.com
-   hashed_password: 91dfd9ddb4198affc5c194cd8ce6d338fde470e2"
+   hashed_password: 91dfd9ddb4198affc5c194cd8ce6d338fde470e2
+   email_confirmed: true
+
+ foo_user:
+   name: Foo
+   email: foo@foo.com
+   hashed_password: 0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33
    email_confirmed: true

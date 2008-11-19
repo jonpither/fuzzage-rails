@@ -38,6 +38,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # See how all your routes lay out with "rake routes"
 
+  map.connect 'home', :controller => "home", :action => "index"
   map.connect 'register', :controller => "main", :action => "register"
   map.connect 'login', :controller => "main", :action => "login"
   map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"

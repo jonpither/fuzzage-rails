@@ -12,7 +12,6 @@
 <div id="header">
     <div id="logo">
         <h1><a href="#">Fuzzage</a></h1>
-        <!--<p><a href="http://www.freecsstemplates.org/">By Free CSS Templates</a></p>-->
     </div>
     <div id="menu">
         <ul>
@@ -26,15 +25,32 @@
 <!-- end header -->
 <!-- start page -->
 <div id="page">
-    <p style="color: green"><%= flash[:notice] %></p>
+    <!-- start sidebar -->
+    <div id="sidebar">
+        <% if session[:user_id] %>
+            <ul>
+                <li id="categories">
+                    <ul>
+                        <h2>You are logged in.</h2>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        <% end %>
+    </div>
+    <!-- end sidebar -->
+    <!-- start content -->
+    <div id="content">
+        <p style="color: green"><%= flash[:notice] %></p>
 
-    <%= yield %>
+        <%= yield %>
+    </div>
 </div>
 <!-- end page -->
 <!-- start footer -->
 <div id="footer">
-	<p class="legal">
-		&copy;2008 Fuzzage. Copyright Jon Pither. All Rights Reserved.
+    <p class="legal">
+        &copy;2008 Fuzzage. Copyright Jon Pither. All Rights Reserved.
 </div>
 <!-- end footer -->
 

@@ -1270,3 +1270,630 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.000462)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
   [4;35;1mSQL (0.000590)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
   [4;36;1mSQL (0.000786)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000116)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000292)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000256)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01014 (98 reqs/sec) | Rendering: 0.00622 (61%) | DB: 0.00055 (5%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00380 (263 reqs/sec) | Rendering: 0.00149 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00484 (206 reqs/sec) | Rendering: 0.00221 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00310 (322 reqs/sec) | Rendering: 0.00104 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00833 (120 reqs/sec) | Rendering: 0.00436 (52%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:29:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.02252 (44 reqs/sec) | Rendering: 0.01843 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:29:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00398 (251 reqs/sec) | Rendering: 0.00185 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:30:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00556 (179 reqs/sec) | Rendering: 0.00167 (30%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:30:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00770 (129 reqs/sec) | Rendering: 0.00246 (31%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:30:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00055 (1827 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/home]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:30:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiElBsZWFzZSBsb2cgaW4GOgpAdXNlZHsGOwZG--d2010721b2c5d50960f72a26d1bb20308018a678
+  Parameters: {"action"=>"login", "controller"=>"main"}
+  [4;36;1mUser Columns (0.001724)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.01696 (58 reqs/sec) | Rendering: 0.00592 (34%) | DB: 0.00172 (10%) | 200 OK [http://localhost/login]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:32:33) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIhJQbGVhc2UgbG9nIGluBjoKQHVzZWR7BjsHVA==--362b825ff3d760b6d74020eaf30d147c1ed3665f
+  Parameters: {"action"=>"login", "authenticity_token"=>"cee52d5e3953303989baa5d2506a629456b80466", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+  [4;35;1mUser Columns (0.003676)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001534)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Redirected to http://localhost:3000/main
+Completed in 0.02663 (37 reqs/sec) | DB: 0.00521 (19%) | 302 Found [http://localhost/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:32:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiRXZWxjb21lIEZvby4gWW91IGFyZSBsb2dnZWQgaW4u
+BjoKQHVzZWR7BjsHRg==--ad8748ac61da62e7fc55e51f3b5506999b470f0a
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00436 (229 reqs/sec) | Rendering: 0.00148 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:33:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiRXZWxjb21lIEZvby4gWW91IGFyZSBsb2dnZWQgaW4u
+BjoKQHVzZWR7BjsHVA==--696e16ea71d90c23e1a6777fa6c8473568961dc4
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00664 (150 reqs/sec) | Rendering: 0.00259 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:33:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00837 (119 reqs/sec) | Rendering: 0.00270 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:33:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00648 (154 reqs/sec) | Rendering: 0.00253 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:33:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00474 (211 reqs/sec) | Rendering: 0.00190 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:33:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00685 (146 reqs/sec) | Rendering: 0.00263 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:33:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"login", "controller"=>"main"}
+  [4;35;1mUser Columns (0.004857)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.03908 (25 reqs/sec) | Rendering: 0.00847 (21%) | DB: 0.00486 (12%) | 200 OK [http://localhost/login]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:33:15) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--554cf6696aaf0bc6194be341a6b1b2d9c97f599c
+  Parameters: {"action"=>"login", "authenticity_token"=>"cee52d5e3953303989baa5d2506a629456b80466", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+  [4;36;1mUser Columns (0.003226)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001165)[0m   [0mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0.03650 (27 reqs/sec) | DB: 0.00439 (12%) | 302 Found [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:33:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiRXZWxjb21lIEZvby4gWW91IGFyZSBsb2dnZWQgaW4u
+BjoKQHVzZWR7BjsHRg==--ad8748ac61da62e7fc55e51f3b5506999b470f0a
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00048 (2091 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/home]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:33:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIhJQbGVhc2UgbG9nIGluBjoKQHVzZWR7BjsHRg==--568898a71858ddef276f05cfcc81cff838ba22a3
+  Parameters: {"action"=>"login", "controller"=>"main"}
+  [4;36;1mUser Columns (0.001640)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.01421 (70 reqs/sec) | Rendering: 0.00354 (24%) | DB: 0.00164 (11%) | 200 OK [http://localhost/login]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-19 13:50:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNkMDkwOTMyMDE0Zjc2ZTU3
+ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIhJQbGVhc2UgbG9nIGluBjoKQHVzZWR7BjsHVA==--362b825ff3d760b6d74020eaf30d147c1ed3665f
+  Parameters: {"action"=>"login", "authenticity_token"=>"cee52d5e3953303989baa5d2506a629456b80466", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+  [4;35;1mUser Columns (0.002396)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001029)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0.01611 (62 reqs/sec) | DB: 0.00342 (21%) | 302 Found [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:50:34) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiRXZWxjb21lIEZvby4gWW91
+IGFyZSBsb2dnZWQgaW4uBjoKQHVzZWR7BjsIRg==--4898ab2a3faa1e38a39712550c64458786e2852c
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00450 (221 reqs/sec) | Rendering: 0.00118 (26%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:50:37) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiRXZWxjb21lIEZvby4gWW91
+IGFyZSBsb2dnZWQgaW4uBjoKQHVzZWR7BjsIVA==--8425bd1ae22bdd39664c80eb42e0f4f6d41579bd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01020 (98 reqs/sec) | Rendering: 0.00102 (10%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:50:38) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00391 (255 reqs/sec) | Rendering: 0.00118 (30%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:50:39) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00871 (114 reqs/sec) | Rendering: 0.00376 (43%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:51:52) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01063 (94 reqs/sec) | Rendering: 0.00526 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:52:32) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00652 (153 reqs/sec) | Rendering: 0.00388 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:52:40) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00795 (125 reqs/sec) | Rendering: 0.00416 (52%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:54:02) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00823 (121 reqs/sec) | Rendering: 0.00405 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:54:56) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01744 (57 reqs/sec) | Rendering: 0.01510 (86%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:55:56) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01517 (65 reqs/sec) | Rendering: 0.01040 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:57:13) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00740 (135 reqs/sec) | Rendering: 0.00253 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:57:45) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01037 (96 reqs/sec) | Rendering: 0.00555 (53%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:58:07) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00594 (168 reqs/sec) | Rendering: 0.00379 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:58:32) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00640 (156 reqs/sec) | Rendering: 0.00410 (64%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:58:56) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.09826 (10 reqs/sec) | Rendering: 0.00344 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:59:06) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00969 (103 reqs/sec) | Rendering: 0.00382 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 13:59:22) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.00344 (290 reqs/sec) | Rendering: 0.00140 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-19 14:00:32) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+Completed in 0.01107 (90 reqs/sec) | Rendering: 0.00695 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing SeasonsController#index (for 127.0.0.1 at 2008-11-19 14:01:31) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {"action"=>"index", "controller"=>"seasons"}
+  [4;35;1mSeason Load (0.001419)[0m   [0mSELECT * FROM `seasons` [0m
+Rendering template within layouts/standard
+Rendering seasons/index
+  [4;36;1mSeason Columns (0.004010)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+Completed in 0.02926 (34 reqs/sec) | Rendering: 0.01009 (34%) | DB: 0.00543 (18%) | 200 OK [http://localhost/seasons]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-19 14:01:35) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/selenium" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-19 14:01:44) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkEPjhlJToMY3NyZl9pZCIlOTQ1YWEyZGIwNzE3NjNk
+MDkwOTMyMDE0Zjc2ZTU3ZGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--0044beaa8a3aa97954d74c3141dcc0ca92968335
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/selenium/TestRunner.html" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000477)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000248)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000490)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001360)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001301)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001161)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001480)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001481)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001227)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.043093)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000241)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000180)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000401)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.017085)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.009481)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000451)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.011956)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008789)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000475)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000371)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.001216)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000572)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000243)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000475)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001332)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001205)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001606)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.002432)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001462)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001150)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.082044)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000318)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000450)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006645)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005106)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000519)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005217)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007563)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000522)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000841)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000783)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000732)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000427)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000242)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000316)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000471)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001217)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001128)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001094)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001314)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001170)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001042)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008016)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000239)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000351)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004779)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003809)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000407)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006495)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.010992)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000501)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000541)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000646)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
