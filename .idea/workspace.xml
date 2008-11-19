@@ -60,7 +60,7 @@
       <file leaf-file-name="cruise.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/cruise.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5681818">
+            <state line="23" column="2" selection-start="531" selection-end="531" vertical-scroll-proportion="0.52272725">
               <folding />
             </state>
           </provider>
@@ -721,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/cruise.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.5681818">
+        <state line="23" column="2" selection-start="531" selection-end="531" vertical-scroll-proportion="0.52272725">
           <folding />
         </state>
       </provider>
