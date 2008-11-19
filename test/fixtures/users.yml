@@ -5,6 +5,9 @@
    email: darkness@darkness.com
    hashed_password: foo
    email_confirmed: false
-#
-# two:
-#   column: value
+
+ unconfirmed_user:
+   name: Plonder
+   email: evil@darktower.com
+   hashed_password: d3b8b11522ef4de10fd1ec8f773ad85f5641f425
+   email_confirmed: true

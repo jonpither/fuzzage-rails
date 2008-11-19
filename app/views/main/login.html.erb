@@ -1,0 +1,10 @@
+<% @title = 'Login to Fuzzage' %>
+<%= error_messages_for 'user' %>
+<h1>Login</h1>
+<% form_for(@user, :url => { :action => "login" }) do |f| %>
+    <p>email address<br/>
+        <%= text_field "user", "email", "maxlength" => 50, "size" => 20, :id => "user_email" %></p>
+    <p>password<br/>
+        <%= password_field "user", "password", "maxlength" => 20, "size" => 20 , :id => "user_password"%></p>
+    <p><input type="submit" value="login" id="submit"/></p>
+<% end %>

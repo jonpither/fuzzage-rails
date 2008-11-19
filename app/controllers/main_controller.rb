@@ -36,6 +36,14 @@ class MainController < ApplicationController
         redirect_to(:action => "index")
     end
 
+    def login
+        if request.get?
+            @user = User.new
+        else
+            @user = User.new(params[:user])
+        end
+    end
+
     private
 
     def confirmation_hash(string)

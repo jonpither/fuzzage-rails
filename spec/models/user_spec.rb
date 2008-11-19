@@ -1,5 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 require File.dirname(__FILE__) + '/../../app/models/user'
+require 'mocha'
 
 context "A user (in general)" do
     specify "should be valid" do
@@ -68,5 +69,20 @@ context "A user (in general)" do
 
         @user.errors.size.should == 1
         @user.errors.on(:confirm_password).should == "does not match"
+   end
+
+    specify "user should login" do
+        #Given
+        stubbed_user = User.new
+        @user = User.new({:email => 'rolf@rolf.com', :password => 'frodo'})
+        Digest::SHA1.expects(:hexdigest).with(@user.password).returns("barf")
+        User.expects(:find).with(:first,:conditions => ["email = ? and hashed_password = ?", "rolf@rolf.com", "barf"]).
+                returns(stubbed_user)
+
+        #When
+        actual_user = @user.try_to_login
+
+        #Then
+        stubbed_user.should == actual_user
     end
 end

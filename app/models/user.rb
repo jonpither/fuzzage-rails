@@ -15,17 +15,29 @@ class User < ActiveRecord::Base
     end
 
     # hash password before create
+
     def before_create
         self.hashed_password = User.hash_password(self.password)
     end
 
     # after creation, clear password from memory
+
     def after_create
-      @password = nil
-      @confirm_password = nil
+        @password = nil
+        @confirm_password = nil
+    end
+
+    def try_to_login
+        User.login(self.email, self.password)
     end
 
     private
+
+    def self.login(email, password)
+        hashed_password = hash_password(password || '')
+        find(:first,
+                :conditions => ["email = ? and hashed_password = ?", email, hashed_password])
+    end
 
     # hash password for storage in database
     def self.hash_password(password)

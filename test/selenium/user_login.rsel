@@ -1,0 +1,15 @@
+open '/selenium/setup?fixtures=all'
+
+open '/'
+
+click_and_wait 'login'
+assert_title 'Login to Fuzzage'
+
+# Happy Path:
+
+type 'user_email', 'foo@foo.com'
+type 'user_password', 'mypassword'
+click_and_wait 'submit'
+
+assert_title 'Welcome to Fuzzage'
+assert_text_present "Welcome back Plonder. You are logged in."
