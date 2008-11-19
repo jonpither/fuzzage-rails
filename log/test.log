@@ -49420,3 +49420,39 @@ SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
 Rendering template within layouts/layout.rhtml
 Rendering /home/jpither/work/ruby/fuzzage/vendor/plugins/selenium-on-rails/lib/views/record.rhtml
 Completed in 0.01464 (68 reqs/sec) | Rendering: 0.00140 (9%) | DB: 0.00000 (0%) | 200 OK [http://localhost/selenium/postResults/firefox(12).yml]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:10:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00264 (378 reqs/sec) | Rendering: 0.00248 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:10:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00146 (684 reqs/sec) | Rendering: 0.00133 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:10:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00152 (658 reqs/sec) | Rendering: 0.00137 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-19 13:10:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00252 (397 reqs/sec) | Rendering: 0.00230 (91%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
