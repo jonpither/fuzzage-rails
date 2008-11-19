@@ -21,7 +21,7 @@ task :cruise=> %w[
   test:units
   test:functionals
   test:integration
-  test:start_mongrel
+#  test:start_mongrel
   test:acceptance
-  test:stop_mongrel
+#  test:stop_mongrel
 ]
