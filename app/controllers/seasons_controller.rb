@@ -1,5 +1,6 @@
 class SeasonsController < ApplicationController
     layout "standard"
+#    before_filter :authorize
     
     def index
         @seasons = Season.find(:all)

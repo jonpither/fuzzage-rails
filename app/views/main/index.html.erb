@@ -1,8 +1,9 @@
 <% @title = 'Welcome to Fuzzage' %>
-<h1>Welcome! sd</h1>
+<h1>Welcome to Fuzzage! </h1>
+<p>This app is built on ROR, and exists so we can manage table-football competitions.
+    This app provides fixture-list generation, tables and more.</p>
 <p>
-    Click <%= link_to "here", { :controller => "main", :action => "register"}, {:id=> "register"} %> to register.
+    So, if you have an account, please <%= link_to "login", { :controller => "main", :action => "login"}, {:id=> "login"} %>,
+    otherwise click please <%= link_to "register", { :controller => "main", :action => "register"}, {:id=> "register"} %> to register.
 </p>
-<p>
-    Click <%= link_to "here", { :controller => "main", :action => "login"}, {:id=> "login"} %> to login.
-</p>
+<p><img src="/images/fuzzage.png" alt="fuzzage" height="400px"/></p>
