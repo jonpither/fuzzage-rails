@@ -13,6 +13,7 @@ click_and_wait 'submit'
 
 assert_title 'Fuzzage Dashboard'
 assert_text_present "Welcome Plonder. You are logged in."
+assert_element_not_present 'admin_link'
 
 # Validation:
 

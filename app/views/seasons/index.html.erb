@@ -1,21 +1,23 @@
 <% @title = 'List of Seasons' %>
 <h1>Listing seasons</h1>
-
-<table>
-    <tr>
-    </tr>
-
-    <% for season in @seasons %>
+<post>
+    <table>
         <tr>
-            <td><%= season.name %></td>
-            <td><%= link_to 'Show', season, :id => "view_season_#{season.id}" %></td>
-            <td><%= link_to 'Edit', edit_season_path(season), :id => "edit_season_#{season.id}"%></td>
-            <td><%= link_to 'Destroy', season, :confirm => 'Are you sure?',
-                    :method => :delete, :id => "delete_season_#{season.id}" %></td>
+            <th>Name</th>
+            <th>Actions</th>
         </tr>
-    <% end %>
-</table>
 
-<br/>
-
-<%= link_to 'New season', new_season_path, :id => "newSeason" %>
+        <% for season in @seasons %>
+            <tr>
+                <td><%= season.name %></td>
+                <td>
+                    <%= link_to 'Show', season, :id => "view_season_#{season.id}" %>
+                    <%= link_to 'Edit', edit_season_path(season), :id => "edit_season_#{season.id}" %>
+                    <%= link_to 'Destroy', season, :confirm => 'Are you sure?',
+                            :method => :delete, :id => "delete_season_#{season.id}" %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+    <p><%= link_to 'New season', new_season_path, :id => "newSeason" %></p>
+</post>

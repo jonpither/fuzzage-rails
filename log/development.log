@@ -1957,3 +1957,1926 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.000490)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
   [4;35;1mSQL (0.000651)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
   [4;36;1mSQL (0.000570)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.012226)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;36;1mSQL (0.000228)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.066738)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.006962)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008830)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mRole Columns (0.003037)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.000323)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.000511)[0m   [0mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;36;1mSQL (0.001121)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (0.003039)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.022419)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000895)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.002170)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.015645)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000931)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001986)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001977)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.002249)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002275)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002197)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.002087)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002585)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002621)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.002225)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002272)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002051)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.002299)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000472)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000378)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000251)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000250)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000247)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000284)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000290)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001041)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.000944)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001119)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.001122)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001083)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001012)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001151)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001200)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001040)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.001014)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001005)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001039)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.160308)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000408)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000226)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006781)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006545)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000473)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003468)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000505)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006878)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000494)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.009991)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000563)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.009218)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.008834)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000558)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000431)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000763)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000589)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000560)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000640)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000488)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000589)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000265)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;36;1mSQL (0.000266)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;35;1mSQL (0.000257)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAdmin (20081120094311)
+  [4;36;1mSQL (0.000258)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000314)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000564)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001167)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.000955)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001110)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.001196)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001077)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001049)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001310)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001157)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001042)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.001143)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001135)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001087)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.091343)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000244)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000410)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000232)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005336)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008524)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.001498)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005640)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000973)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005440)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000818)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005702)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000882)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.008334)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.016352)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000887)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000704)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000796)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000931)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000862)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000810)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.001938)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000867)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000799)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000528)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;35;1mSQL (0.000516)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;36;1mSQL (0.000532)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;35;1mSQL (0.000512)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAdmin (20081120094311)
+  [4;36;1mSQL (0.000516)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000627)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001380)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002088)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.010014)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.002367)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.002361)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.002124)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001998)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.002407)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002284)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.002541)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002213)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.002006)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.002388)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.106772)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000245)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000396)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000656)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005707)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008661)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000756)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004393)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000785)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004881)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000814)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004650)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000859)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.009129)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.013194)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000897)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001220)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000825)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000752)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000646)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000633)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.078402)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000412)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000128)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000380)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000267)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000361)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.009588)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.114710)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000714)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000829)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000369)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000377)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000451)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005598)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000775)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000595)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004345)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001256)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000630)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005221)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003547)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.007530)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000709)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000409)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001599)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000695)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000370)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000694)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.004324)[0m   [0;1mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (0.003086)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.000899)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000224)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000170)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.086958)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000248)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000403)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000367)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.014692)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.012128)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000403)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000518)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000186)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000202)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002767)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001046)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000341)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004870)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000552)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000394)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.007708)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004844)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.010131)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000839)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000676)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001587)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000618)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000406)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000618)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.003132)[0m   [0;1mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (0.001848)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.001299)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000307)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000202)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000470)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.143859)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000242)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000397)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000585)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.001101)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004675)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.009714)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000844)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000830)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000385)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000368)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000378)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004419)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000944)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000599)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004731)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000775)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000382)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003587)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006248)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.012164)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000804)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000523)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002154)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000161)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000280)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000528)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.003844)[0m   [0;1mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (0.001952)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.000739)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000143)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000194)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.048240)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000189)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000332)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000466)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003492)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007386)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000526)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000669)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000283)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000576)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000281)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.006024)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000640)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000458)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003467)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000785)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000505)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.007843)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.005874)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.012077)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000843)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000556)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001869)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000255)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000427)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000709)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.004340)[0m   [0;1mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (0.002267)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Load (0.001023)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000224)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000462)[0m   [0;1mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, 'admin@admin.com')[0m
+  [4;35;1musers_roles Columns (0.001898)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002069)[0m   [0;1mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;35;1mSQL (0.000987)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000699)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000691)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000647)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001702)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.001497)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001649)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.001794)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.001879)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001740)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.001758)[0m   [0mSHOW FIELDS FROM `shit`[0m
+  [4;36;1mSQL (0.001538)[0m   [0;1mdescribe `shit`[0m
+  [4;35;1mSQL (0.002987)[0m   [0mSHOW KEYS FROM `shit`[0m
+  [4;36;1mSQL (0.001916)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002039)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001925)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002089)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.001913)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.001697)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000242)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002150)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.004094)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000250)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000223)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.002549)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001339)[0m   [0mSELECT * FROM `users` WHERE (email = 'admin@admin.com' and hashed_password = 'd033e22ae348aeb5660fc2140aec35850c4da997') LIMIT 1[0m
+  [4;36;1mJoin Table Columns (0.002379)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.001226)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.002112)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Columns (0.002562)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Columns (0.002678)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001124)[0m   [0mSELECT * FROM `users` WHERE (email = 'admin@admin.com' and hashed_password = 'd033e22ae348aeb5660fc2140aec35850c4da997') LIMIT 1[0m
+  [4;36;1mJoin Table Columns (0.002237)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.000900)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.002179)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001015)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000996)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.002492)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001311)[0m   [0;1mSELECT * FROM `users` WHERE (email = 'admin@admin.com' and hashed_password = 'd033e22ae348aeb5660fc2140aec35850c4da997') LIMIT 1[0m
+  [4;35;1mJoin Table Columns (0.002390)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mRole Load (0.000944)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.001968)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Columns (0.001456)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000507)[0m   [0mSELECT * FROM `users` WHERE (email = 'admin@admin.com' and hashed_password = 'd033e22ae348aeb5660fc2140aec35850c4da997') LIMIT 1[0m
+  [4;36;1mJoin Table Columns (0.002620)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.001431)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.002421)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000528)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000285)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000543)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001094)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001210)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001176)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001372)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001741)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001203)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.001102)[0m   [0;1mSHOW FIELDS FROM `shit`[0m
+  [4;35;1mSQL (0.000938)[0m   [0mdescribe `shit`[0m
+  [4;36;1mSQL (0.001067)[0m   [0;1mSHOW KEYS FROM `shit`[0m
+  [4;35;1mSQL (0.001187)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001171)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001078)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.001084)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001101)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001168)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.178307)[0m   [0mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;36;1mSQL (0.000290)[0m   [0;1mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000364)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.080336)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.026122)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000697)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004045)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000788)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004375)[0m   [0mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000921)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006565)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000856)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.007593)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000873)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005347)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.012253)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000907)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001139)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000866)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000693)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000719)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000726)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:00:41) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+    /vendor/rails/actionpack/lib/action_controller/request_forgery_protection.rb:86:in `verify_authenticity_token'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:430:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:592:in `run_before_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:578:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (unprocessable_entity)
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:01:05) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b3ae043c2a4293fd867344c6264d45523f72351e
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+    /vendor/rails/actionpack/lib/action_controller/request_forgery_protection.rb:86:in `verify_authenticity_token'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:430:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:592:in `run_before_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:578:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (unprocessable_entity)
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:01:19) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b3ae043c2a4293fd867344c6264d45523f72351e
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+    /vendor/rails/actionpack/lib/action_controller/request_forgery_protection.rb:86:in `verify_authenticity_token'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:430:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:592:in `run_before_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:578:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (unprocessable_entity)
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:02:28) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--b3ae043c2a4293fd867344c6264d45523f72351e
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000290)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000212)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.001552)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000891)[0m   [0mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.11020 (9 reqs/sec) | Rendering: 0.00840 (7%) | DB: 0.00294 (2%) | 200 OK [http://localhost/login]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:02:31) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZJbnZhbGlkIHVzZXIvcGFzc3dvcmQgY29tYmluYXRp
+b24GOgpAdXNlZHsGOwdG--3edbd75109b4a3785000b7ff5ba9399cf0306ae5
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+  [4;36;1mUser Columns (0.003562)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000949)[0m   [0mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.03422 (29 reqs/sec) | Rendering: 0.00554 (16%) | DB: 0.00451 (13%) | 200 OK [http://localhost/login]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:02:44) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZJbnZhbGlkIHVzZXIvcGFzc3dvcmQgY29tYmluYXRp
+b24GOgpAdXNlZHsGOwdG--3edbd75109b4a3785000b7ff5ba9399cf0306ae5
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"admin@admin.com"}}
+  [4;36;1mUser Columns (0.002819)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000974)[0m   [0mSELECT * FROM `users` WHERE (email = 'admin@admin.com' and hashed_password = 'd033e22ae348aeb5660fc2140aec35850c4da997') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0.02574 (38 reqs/sec) | DB: 0.00379 (14%) | 302 Found [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-20 11:02:44) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOgtAcm9sZXMwOhZAYXR0cmlidXRlc19jYWNo
+ZXsAOhBAYXR0cmlidXRlc3sKIgluYW1lIhJBZG1pbmlzdHJhdG9yIhRoYXNo
+ZWRfcGFzc3dvcmQiLWQwMzNlMjJhZTM0OGFlYjU2NjBmYzIxNDBhZWMzNTg1
+MGM0ZGE5OTciB2lkIgYxIhRlbWFpbF9jb25maXJtZWQiBjAiCmVtYWlsIhRh
+ZG1pbkBhZG1pbi5jb206DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIw
+YWNkMjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewY6C25vdGljZSIuV2VsY29tZSBBZG1pbmlzdHJhdG9y
+LiBZb3UgYXJlIGxvZ2dlZCBpbi4GOgpAdXNlZHsGOwxG--8d114ec4001d4b95446199c4cc299621612b8f72
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+  [4;36;1mUser Columns (0.001505)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mJoin Table Columns (0.001269)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mRole Load (0.000755)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.001123)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 0.01643 (60 reqs/sec) | Rendering: 0.00969 (59%) | DB: 0.00465 (28%) | 200 OK [http://localhost/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-20 11:02:48) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoLQHJvbGVzMDoQQGF0dHJpYnV0ZXN7CiIJbmFt
+ZSISQWRtaW5pc3RyYXRvciIUaGFzaGVkX3Bhc3N3b3JkIi1kMDMzZTIyYWUz
+NDhhZWI1NjYwZmMyMTQwYWVjMzU4NTBjNGRhOTk3IgdpZCIGMSIUZW1haWxf
+Y29uZmlybWVkIgYwIgplbWFpbCIUYWRtaW5AYWRtaW4uY29tOhZAYXR0cmli
+dXRlc19jYWNoZXsAIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewY6C25vdGljZSIuV2VsY29tZSBBZG1pbmlzdHJhdG9y
+LiBZb3UgYXJlIGxvZ2dlZCBpbi4GOgpAdXNlZHsGOwxU--a1f48064d80ff59fa03cc305c17d96f40c41f7e9
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+
+
+NoMethodError (undefined method `authorize' for AdminController:Class):
+    /app/controllers/admin_controller.rb:2
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:214:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:283:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+  [4;36;1mUser Columns (0.001692)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-20 11:05:18) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOgtAcm9sZXMwOhZAYXR0cmlidXRlc19jYWNo
+ZXsAOhBAYXR0cmlidXRlc3sKIgluYW1lIhJBZG1pbmlzdHJhdG9yIhRoYXNo
+ZWRfcGFzc3dvcmQiLWQwMzNlMjJhZTM0OGFlYjU2NjBmYzIxNDBhZWMzNTg1
+MGM0ZGE5OTciB2lkIgYxIhRlbWFpbF9jb25maXJtZWQiBjAiCmVtYWlsIhRh
+ZG1pbkBhZG1pbi5jb206DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIw
+YWNkMjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--b03db47ac7f2aff26cb83dec5028bb1b49dbc243
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUser Columns (0.001544)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+NoMethodError (undefined method `has_role' for #<User:0xb6a32ddc>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /app/controllers/application.rb:24:in `authorize_admin'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:430:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:592:in `run_before_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:578:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-20 11:05:30) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoLQHJvbGVzMDoQQGF0dHJpYnV0ZXN7CiIJbmFt
+ZSISQWRtaW5pc3RyYXRvciIUaGFzaGVkX3Bhc3N3b3JkIi1kMDMzZTIyYWUz
+NDhhZWI1NjYwZmMyMTQwYWVjMzU4NTBjNGRhOTk3IgdpZCIGMSIUZW1haWxf
+Y29uZmlybWVkIgYwIgplbWFpbCIUYWRtaW5AYWRtaW4uY29tOhZAYXR0cmli
+dXRlc19jYWNoZXsAIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--568ace10f7147c225ba1987f74c94b36ceb58815
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.001465)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+NoMethodError (undefined method `has_role' for #<User:0xb790e874>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /app/controllers/application.rb:24:in `authorize_admin'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `send'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /vendor/rails/activesupport/lib/active_support/callbacks.rb:161:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:430:in `call'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:592:in `run_before_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:578:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-20 11:05:39) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOhZAYXR0cmlidXRlc19jYWNoZXsAOhBAYXR0
+cmlidXRlc3sKIgluYW1lIhJBZG1pbmlzdHJhdG9yIhRoYXNoZWRfcGFzc3dv
+cmQiLWQwMzNlMjJhZTM0OGFlYjU2NjBmYzIxNDBhZWMzNTg1MGM0ZGE5OTci
+B2lkIgYxIhRlbWFpbF9jb25maXJtZWQiBjAiCmVtYWlsIhRhZG1pbkBhZG1p
+bi5jb206C0Byb2xlczA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIw
+YWNkMjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--66a4c33224acb27b9b0e564002e5d6b741050568
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUser Columns (0.001582)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mJoin Table Columns (0.002941)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.000566)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.001170)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/standard
+Rendering admin/index
+Completed in 0.02463 (40 reqs/sec) | Rendering: 0.00638 (25%) | DB: 0.00802 (32%) | 200 OK [http://localhost/admin]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2008-11-20 11:05:47) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoQQGF0dHJpYnV0ZXN7CiIJbmFtZSISQWRtaW5p
+c3RyYXRvciIUaGFzaGVkX3Bhc3N3b3JkIi1kMDMzZTIyYWUzNDhhZWI1NjYw
+ZmMyMTQwYWVjMzU4NTBjNGRhOTk3IgdpZCIGMSIUZW1haWxfY29uZmlybWVk
+IgYwIgplbWFpbCIUYWRtaW5AYWRtaW4uY29tOhZAYXR0cmlidXRlc19jYWNo
+ZXsAOgtAcm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3ad05ec454f5041774e1d8fc022f0839242acc18
+  Parameters: {"action"=>"logout", "controller"=>"main"}
+Redirected to http://localhost:3000/main
+Completed in 0.00311 (321 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-20 11:05:47) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNk
+MjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6
+Rmxhc2hIYXNoewY6C25vdGljZSIPTG9nZ2VkIG91dAY6CkB1c2VkewY7CEY=--cd76a74c8ee1b27d7c8f7b28a9c3ceb54b587a7d
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00637 (157 reqs/sec) | Rendering: 0.00415 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:06:08) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6
+Rmxhc2hIYXNoewY6C25vdGljZSIPTG9nZ2VkIG91dAY6CkB1c2VkewY7CFQ=--476e675659718b5118cc3164cdb573edeecd29bb
+  Parameters: {"action"=>"login", "controller"=>"main"}
+  [4;35;1mUser Columns (0.002868)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.02739 (36 reqs/sec) | Rendering: 0.00670 (24%) | DB: 0.00287 (10%) | 200 OK [http://localhost/login]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 11:06:12) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNk
+MjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6
+Rmxhc2hIYXNoewAGOgpAdXNlZHsA--63ca2c32f9b385e8d593368987e0ae410e8f1037
+  Parameters: {"action"=>"login", "controller"=>"main", "user"=>{"password"=>"[FILTERED]", "email"=>"foo@foo.com"}}
+  [4;36;1mUser Columns (0.001696)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000809)[0m   [0mSELECT * FROM `users` WHERE (email = 'foo@foo.com' and hashed_password = '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed in 0.01451 (68 reqs/sec) | DB: 0.00251 (17%) | 302 Found [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-20 11:06:13) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJp
+YnV0ZXN7CiIJbmFtZSIIRm9vIhRoYXNoZWRfcGFzc3dvcmQiLTBiZWVjN2I1
+ZWEzZjBmZGJjOTVkMGRkNDdmM2M1YmMyNzVkYThhMzMiB2lkIg42MjczOTA1
+MjYiFGVtYWlsX2NvbmZpcm1lZCIGMSIKZW1haWwiEGZvb0Bmb28uY29tOgtA
+cm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewY6C25vdGljZSIkV2VsY29tZSBGb28uIFlvdSBhcmUgbG9nZ2Vk
+IGluLgY6CkB1c2VkewY7DEY=--2f244ae97beb4739e65ba5006a1b55ac52f3f34e
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+  [4;36;1mUser Columns (0.001810)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mJoin Table Columns (0.001324)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mRole Load (0.000748)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 627390526 ) [0m
+Completed in 0.01389 (72 reqs/sec) | Rendering: 0.00792 (57%) | DB: 0.00388 (27%) | 200 OK [http://localhost/home]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-20 11:06:20) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOhBAYXR0cmlidXRlc3sKIgluYW1lIghGb28i
+FGhhc2hlZF9wYXNzd29yZCItMGJlZWM3YjVlYTNmMGZkYmM5NWQwZGQ0N2Yz
+YzViYzI3NWRhOGEzMyIHaWQiDjYyNzM5MDUyNiIUZW1haWxfY29uZmlybWVk
+IgYxIgplbWFpbCIQZm9vQGZvby5jb206FkBhdHRyaWJ1dGVzX2NhY2hlewA6
+C0Byb2xlczA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNkMjM5
+ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewY6C25vdGljZSIkV2VsY29tZSBGb28uIFlvdSBhcmUgbG9nZ2Vk
+IGluLgY6CkB1c2VkewY7DFQ=--7d4a7a633fd71a79fbda42f3394ca99ce661a450
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUser Columns (0.003094)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mJoin Table Columns (0.001554)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.001177)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 627390526 ) [0m
+Redirected to http://localhost:3000/main/restricted
+Filter chain halted as [:authorize_admin] rendered_or_redirected.
+Completed in 0.01396 (71 reqs/sec) | DB: 0.00582 (41%) | 302 Found [http://localhost/admin]
+
+
+Processing MainController#show (for 127.0.0.1 at 2008-11-20 11:06:20) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJp
+YnV0ZXN7CiIJbmFtZSIIRm9vIhRoYXNoZWRfcGFzc3dvcmQiLTBiZWVjN2I1
+ZWEzZjBmZGJjOTVkMGRkNDdmM2M1YmMyNzVkYThhMzMiB2lkIg42MjczOTA1
+MjYiFGVtYWlsX2NvbmZpcm1lZCIGMSIKZW1haWwiEGZvb0Bmb28uY29tOgtA
+cm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--c6dc553ae6715b464cba7fee586633a342d028f9
+  Parameters: {"action"=>"show", "id"=>"restricted", "controller"=>"main"}
+
+
+ActionController::UnknownAction (No action responded to show):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mUser Columns (0.001573)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-20 11:06:28) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOhBAYXR0cmlidXRlc3sKIgluYW1lIghGb28i
+FGhhc2hlZF9wYXNzd29yZCItMGJlZWM3YjVlYTNmMGZkYmM5NWQwZGQ0N2Yz
+YzViYzI3NWRhOGEzMyIHaWQiDjYyNzM5MDUyNiIUZW1haWxfY29uZmlybWVk
+IgYxIgplbWFpbCIQZm9vQGZvby5jb206FkBhdHRyaWJ1dGVzX2NhY2hlewA6
+C0Byb2xlczA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNkMjM5
+ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--cef6b155559a075c46cddd8e8ef758331fce4c7d
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUser Columns (0.015525)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mJoin Table Columns (0.001505)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.000513)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 627390526 ) [0m
+Redirected to http://localhost:3000/main/restricted
+Filter chain halted as [:authorize_admin] rendered_or_redirected.
+Completed in 0.02644 (37 reqs/sec) | DB: 0.01912 (72%) | 302 Found [http://localhost/admin/index]
+
+
+Processing MainController#show (for 127.0.0.1 at 2008-11-20 11:06:28) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJp
+YnV0ZXN7CiIJbmFtZSIIRm9vIhRoYXNoZWRfcGFzc3dvcmQiLTBiZWVjN2I1
+ZWEzZjBmZGJjOTVkMGRkNDdmM2M1YmMyNzVkYThhMzMiB2lkIg42MjczOTA1
+MjYiFGVtYWlsX2NvbmZpcm1lZCIGMSIKZW1haWwiEGZvb0Bmb28uY29tOgtA
+cm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--c6dc553ae6715b464cba7fee586633a342d028f9
+  Parameters: {"action"=>"show", "id"=>"restricted", "controller"=>"main"}
+
+
+ActionController::UnknownAction (No action responded to show):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mUser Columns (0.001643)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+Processing AdminController#sad (for 127.0.0.1 at 2008-11-20 11:06:34) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOhBAYXR0cmlidXRlc3sKIgluYW1lIghGb28i
+FGhhc2hlZF9wYXNzd29yZCItMGJlZWM3YjVlYTNmMGZkYmM5NWQwZGQ0N2Yz
+YzViYzI3NWRhOGEzMyIHaWQiDjYyNzM5MDUyNiIUZW1haWxfY29uZmlybWVk
+IgYxIgplbWFpbCIQZm9vQGZvby5jb206FkBhdHRyaWJ1dGVzX2NhY2hlewA6
+C0Byb2xlczA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNkMjM5
+ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--cef6b155559a075c46cddd8e8ef758331fce4c7d
+  Parameters: {"action"=>"sad", "controller"=>"admin"}
+  [4;35;1mUser Columns (0.002876)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mJoin Table Columns (0.001496)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.000536)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 627390526 ) [0m
+Redirected to http://localhost:3000/main/restricted
+Filter chain halted as [:authorize_admin] rendered_or_redirected.
+Completed in 0.01715 (58 reqs/sec) | DB: 0.00655 (38%) | 302 Found [http://localhost/admin/sad]
+
+
+Processing MainController#show (for 127.0.0.1 at 2008-11-20 11:06:34) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJp
+YnV0ZXN7CiIJbmFtZSIIRm9vIhRoYXNoZWRfcGFzc3dvcmQiLTBiZWVjN2I1
+ZWEzZjBmZGJjOTVkMGRkNDdmM2M1YmMyNzVkYThhMzMiB2lkIg42MjczOTA1
+MjYiFGVtYWlsX2NvbmZpcm1lZCIGMSIKZW1haWwiEGZvb0Bmb28uY29tOgtA
+cm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--c6dc553ae6715b464cba7fee586633a342d028f9
+  Parameters: {"action"=>"show", "id"=>"restricted", "controller"=>"main"}
+
+
+ActionController::UnknownAction (No action responded to show):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mUser Columns (0.001496)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-20 11:06:41) [GET]
+  Session ID: BAh7CDoJdXNlcm86CVVzZXIIOhBAYXR0cmlidXRlc3sKIgluYW1lIghGb28i
+FGhhc2hlZF9wYXNzd29yZCItMGJlZWM3YjVlYTNmMGZkYmM5NWQwZGQ0N2Yz
+YzViYzI3NWRhOGEzMyIHaWQiDjYyNzM5MDUyNiIUZW1haWxfY29uZmlybWVk
+IgYxIgplbWFpbCIQZm9vQGZvby5jb206FkBhdHRyaWJ1dGVzX2NhY2hlewA6
+C0Byb2xlczA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNkMjM5
+ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--cef6b155559a075c46cddd8e8ef758331fce4c7d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/standard
+Rendering home/index
+  [4;35;1mUser Columns (0.002993)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mJoin Table Columns (0.002245)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mRole Load (0.000557)[0m   [0mSELECT * FROM `roles` INNER JOIN `users_roles` ON `roles`.id = `users_roles`.role_id WHERE (`users_roles`.user_id = 627390526 ) [0m
+Completed in 0.02616 (38 reqs/sec) | Rendering: 0.01484 (56%) | DB: 0.00729 (27%) | 200 OK [http://localhost/home]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2008-11-20 11:06:44) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMTFhNzY1ZTJhNzI1MDBjYzE5YjBhY2QyMzlkNjAy
+YmU6CXVzZXJvOglVc2VyCDoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJp
+YnV0ZXN7CiIJbmFtZSIIRm9vIhRoYXNoZWRfcGFzc3dvcmQiLTBiZWVjN2I1
+ZWEzZjBmZGJjOTVkMGRkNDdmM2M1YmMyNzVkYThhMzMiB2lkIg42MjczOTA1
+MjYiFGVtYWlsX2NvbmZpcm1lZCIGMSIKZW1haWwiEGZvb0Bmb28uY29tOgtA
+cm9sZXMwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxh
+c2hIYXNoewAGOgpAdXNlZHsA--c6dc553ae6715b464cba7fee586633a342d028f9
+  Parameters: {"action"=>"logout", "controller"=>"main"}
+Redirected to http://localhost:3000/main
+Completed in 0.00494 (202 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-20 11:06:45) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTExYTc2NWUyYTcyNTAwY2MxOWIwYWNk
+MjM5ZDYwMmJlIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6
+Rmxhc2hIYXNoewY6C25vdGljZSIPTG9nZ2VkIG91dAY6CkB1c2VkewY7CEY=--cd76a74c8ee1b27d7c8f7b28a9c3ceb54b587a7d
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00533 (187 reqs/sec) | Rendering: 0.00165 (31%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000153)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000512)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000294)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001520)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000596)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001132)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001022)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001207)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001164)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001111)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001170)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.001070)[0m   [0;1mSHOW FIELDS FROM `shit`[0m
+  [4;35;1mSQL (0.000986)[0m   [0mdescribe `shit`[0m
+  [4;36;1mSQL (0.001068)[0m   [0;1mSHOW KEYS FROM `shit`[0m
+  [4;35;1mSQL (0.001214)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001202)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001092)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.001089)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001041)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001068)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000182)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.054932)[0m   [0mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000154)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000390)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.011535)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.026348)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.007491)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000576)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.034925)[0m   [0mCREATE TABLE `shit` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.014740)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000568)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.029146)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000607)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002953)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.012113)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000637)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000702)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000716)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000654)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000975)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.230457)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000252)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000405)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005862)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008515)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000719)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000520)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000201)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000196)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004272)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000604)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000341)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002793)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000634)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000341)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.011199)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006857)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.010754)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000708)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000403)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001251)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000160)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000291)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000522)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.001721)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000691)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000105)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000103)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000409)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.001322)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000213)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.001144)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000565)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000467)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000422)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001051)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000945)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001133)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001179)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001073)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001011)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.001197)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001140)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001018)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001006)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000985)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.000995)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000424)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000277)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.007004)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000279)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.012199)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.011342)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000412)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.007604)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000658)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.017304)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000500)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.008861)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000490)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004506)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.007296)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000539)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000419)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000730)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000748)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000638)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.001458)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.085322)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000158)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000257)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000372)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006429)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006166)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000477)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000590)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004622)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000675)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000378)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003817)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000936)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000428)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.006051)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007655)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.009587)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000687)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000389)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001252)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000418)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000301)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.001065)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.006293)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000640)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000128)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000330)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.001344)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000330)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000517)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000906)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.003332)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000506)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001046)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000969)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001614)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001305)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.010828)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001185)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.001741)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001250)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001050)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001032)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000999)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.001607)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000174)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000164)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.073266)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000261)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000421)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000239)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000629)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006402)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007709)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000723)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000800)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000391)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000377)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000377)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005072)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000793)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000598)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.006166)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000869)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000675)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003790)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004867)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.012642)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.001533)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000776)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002285)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000330)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000523)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000717)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.002745)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000973)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000491)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.002537)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000413)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000644)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000726)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000900)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000825)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002049)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001874)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.002230)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002366)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002265)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.002106)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002407)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002282)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.002054)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002090)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002289)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.002167)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+  [4;36;1mSQL (0.001069)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000626)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000140)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.005990)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000262)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.011472)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.013638)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000431)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002661)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000389)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004828)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000408)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.010524)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000443)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006395)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.009863)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000914)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000716)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000772)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000749)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000718)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000702)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000167)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.174785)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000266)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000431)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000324)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000267)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000653)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.009925)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.012060)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000822)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000841)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000383)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000380)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000421)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005001)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001030)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000640)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.005202)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000831)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000659)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004175)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004605)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.008822)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.001979)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000769)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002262)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000295)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000493)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000704)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.003023)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.001073)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000263)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000505)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.002316)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000391)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.002685)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001035)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000966)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000877)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002053)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.002132)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.002375)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002550)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002393)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.002033)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002296)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002274)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.002100)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002056)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002016)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.002021)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000894)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000566)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000316)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.008217)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000536)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000240)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.007548)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008896)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000816)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005307)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000928)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.008681)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000905)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.007948)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000916)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006850)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.010381)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000968)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000708)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.001051)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.001533)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000798)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000882)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.050907)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000346)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000186)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000482)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005069)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.006277)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000557)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000682)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000319)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000314)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000316)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003417)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000704)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000488)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003877)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000715)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000519)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.009538)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003738)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.011186)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000784)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000564)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001735)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000224)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000396)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000581)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.002221)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000899)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000196)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000455)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.001868)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000403)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.001475)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000738)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000763)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000641)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001503)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001421)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001676)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001785)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001638)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001592)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002027)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002065)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001675)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001832)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.001592)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.001665)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000674)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000466)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000203)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.006968)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000338)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000208)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000495)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.009034)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007852)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000573)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097811)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.002553)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004895)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000932)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004348)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000967)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006774)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.012749)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000886)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000671)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000786)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000684)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000658)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.001386)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.098149)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000242)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000403)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000221)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.009075)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.008860)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000760)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000827)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000376)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000375)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000368)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000371)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005026)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001012)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000621)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.007389)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000801)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000683)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.006108)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004823)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.009930)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000835)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000752)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.001457)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000183)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000470)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000660)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.001826)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000616)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000101)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000278)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email_confirmed`, `email`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'admin@admin.com')[0m
+  [4;36;1musers_roles Columns (0.001265)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000197)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000600)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000852)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000424)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001034)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000932)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001172)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001196)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001103)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001024)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.001404)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001879)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001633)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001257)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.001132)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.001123)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+  [4;36;1mSQL (0.000692)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000322)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000124)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.020025)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;35;1mSQL (0.000245)[0m   [0mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000343)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.008864)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.005911)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000393)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004178)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000371)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005287)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000377)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.004633)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000380)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003869)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.007087)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.000461)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000354)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000505)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000479)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000520)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m

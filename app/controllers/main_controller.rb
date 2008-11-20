@@ -5,6 +5,10 @@ class MainController < ApplicationController
 
     end
 
+    def restricted
+
+    end
+
     def register
         if request.get?
             @user = User.new
@@ -44,7 +48,7 @@ class MainController < ApplicationController
             logged_in_user = @user.try_to_login
 
             if logged_in_user
-                session[:user_id] = logged_in_user.id
+                session[:user] = logged_in_user
                 flash[:notice] = "Welcome #{logged_in_user.name}. You are logged in."
                 redirect_to(:controller => "home", :action => "index")
             else
@@ -55,7 +59,7 @@ class MainController < ApplicationController
     end
 
     def logout
-        session[:user_id] = nil
+        session[:user] = nil
         flash[:notice] = "Logged out"
         redirect_to(:action => 'index')
     end

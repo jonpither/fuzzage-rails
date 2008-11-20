@@ -17,7 +17,7 @@ namespace :test do
 end
 
 task :cruise=> %w[
-  test:reset_test_database
+  db:remigrate
   test:units
   test:functionals
   test:integration

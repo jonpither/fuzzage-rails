@@ -8,6 +8,7 @@ context "A user (in general)" do
         @user.save
 
         @user.should be_valid
+        Role.create(:name => 'fpp')
     end
 
     specify "should be invalid without a name" do

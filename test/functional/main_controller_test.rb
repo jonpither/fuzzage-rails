@@ -70,8 +70,7 @@ class MainControllerTest < ActionController::TestCase
 
         #Then
         assert_redirected_to :action => "index"
-        assert_equal 4, session.data["user_id"]
-#        session.data["user_id"]=nil
+        assert_equal user_in_db, session.data["user"]
     end
 
     def test_unsuccessful_login

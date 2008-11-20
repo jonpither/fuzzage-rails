@@ -1,6 +1,6 @@
 class SeasonsController < ApplicationController
     layout "standard"
-#    before_filter :authorize
+    before_filter :authorize_admin
     
     def index
         @seasons = Season.find(:all)
@@ -19,7 +19,6 @@ class SeasonsController < ApplicationController
     end
 
     def create
-        p "here #{params[:season]}"
         @season = Season.new(params[:season])
         if @season.save
             flash[:notice] = 'Season was successfully created.'

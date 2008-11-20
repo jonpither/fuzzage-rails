@@ -15,6 +15,9 @@
     </div>
     <div id="menu">
         <ul>
+            <% if session[:user] && session[:user].has_role?('admin') %>
+                <li><%= link_to "Admin", { :controller => "admin", :action => "index"}, {:id=> "admin_link"} %></li>
+            <% end %>
             <li class="current_page_item"><%= link_to "Dashboard", { :controller => "home", :action => "index"}, {:id=> "dashboard"} %></li>
             <li><a href="#">Table</a></li>
             <li><a href="#">Fixtures</a></li>
@@ -27,7 +30,7 @@
 <div id="page">
     <!-- start sidebar -->
     <div id="sidebar">
-        <% if session[:user_id] %>
+        <% if session[:user] %>
             <ul>
                 <li id="categories">
                     <ul>

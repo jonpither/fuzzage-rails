@@ -42,8 +42,10 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'register', :controller => "main", :action => "register"
   map.connect 'login', :controller => "main", :action => "login"
   map.connect 'logout', :controller => "main", :action => "logout"
+  map.connect 'admin', :controller => "admin", :action => "index"
   map.connect 'confirm_email/:hash', :controller => "main", :action => "confirm_email"
   map.connect '', :controller => "main", :action => "index"
+  map.connect 'restricted', :controller => "main", :action => "restricted"
 
 
   # Install the default routes as the lowest priority.

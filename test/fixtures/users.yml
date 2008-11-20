@@ -1,4 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+ admin:
+   id: 1
+   name: Administrator
+   email: admin@admin.com
+   hashed_password: d033e22ae348aeb5660fc2140aec35850c4da997
+   email_confirmed: true
 
  unconfirmed_user:
    name: Figit

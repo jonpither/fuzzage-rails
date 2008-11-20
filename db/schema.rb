@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081118140506) do
+ActiveRecord::Schema.define(:version => 20081120094311) do
+
+  create_table "roles", :force => true do |t|
+    t.string "name", :null => false
+  end
+
+  add_index "roles", ["name"], :name => "index_roles_on_name"
 
   create_table "seasons", :force => true do |t|
     t.string   "name",       :null => false
@@ -22,6 +28,11 @@ ActiveRecord::Schema.define(:version => 20081118140506) do
     t.string  "hashed_password", :limit => 40
     t.string  "email"
     t.boolean "email_confirmed",               :default => false
+  end
+
+  create_table "users_roles", :force => true do |t|
+    t.integer "user_id", :limit => 11, :null => false
+    t.integer "role_id", :limit => 11, :null => false
   end
 
 end

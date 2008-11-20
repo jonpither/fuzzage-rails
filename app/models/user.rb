@@ -1,6 +1,8 @@
 require "digest/sha1"
 
 class User < ActiveRecord::Base
+    has_and_belongs_to_many :roles, :join_table => 'users_roles'
+
     attr_accessor :password, :confirm_password
 
     validates_presence_of :name, :email
@@ -29,6 +31,20 @@ class User < ActiveRecord::Base
 
     def try_to_login
         User.login(self.email, self.password)
+    end
+
+    def has_role?(role)
+        self.roles.each { | user_role |
+            if(role==user_role.name)
+                return true
+            end
+        }
+        return false;
+    end
+
+    def add_role(role)
+        return if self.has_role?(role)
+        self.roles << Role.find_by_name(role)
     end
 
     private
