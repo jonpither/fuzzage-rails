@@ -1,9 +1,0 @@
-open '/selenium/setup?fixtures=all'
-
-open '/login'
-type 'user_email', 'admin@admin.com'
-type 'user_password', 'admin'
-click_and_wait 'submit'
-
-open '/seasons'
-assert_title 'List of Seasons'

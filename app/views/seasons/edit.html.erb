@@ -3,10 +3,12 @@
 
 <% form_for(@season) do |f| %>
     <%= f.error_messages %>
-    <p>
-        <label for="season_name">Name</label><br/>
-        <%= text_field 'season', 'name', :id=> 'season_name' %>
-    </p>
+    <fieldset>
+        <label for="season_name">Name</label>
+        <%= text_field 'season', 'name', :id=> 'season_name' %> <br/>
+         <label for="season_status">Status</label>
+        <%= f.select :status, Season.statuses, :id=>'season_status' %> <br/>
+    </fieldset>
     <p>
         <%= f.submit "Update", :id=>'submit' %>
     </p>

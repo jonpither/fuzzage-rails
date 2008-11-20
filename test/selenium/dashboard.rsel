@@ -1,0 +1,6 @@
+open '/selenium/setup?fixtures=all'
+
+open '/login'
+type 'user_email', 'evil@darktower.com'
+type 'user_password', 'mypassword'
+click_and_wait 'submit'

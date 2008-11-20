@@ -4,7 +4,10 @@
         <h1>Fuzzage Dashboard! </h1>
     </div>
     <div class="entry">
-        <h3>Welcome back.</h3>
+        <h3>Welcome back <%= session[:user].name %>.
+        <% if seasons = open_seasons %>
+        There are seasons open that you can join.</h3>
+        <% end %>
     </div>
 </div>
 

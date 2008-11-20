@@ -6,6 +6,9 @@ type 'user_password', 'admin'
 click_and_wait 'submit'
 
 open '/seasons'
+assert_title 'List of Seasons'
+assert_text 'xpath=//table/tbody/tr[2]/td', 'test badass season'
+assert_text 'xpath=//table/tbody/tr[2]/td[2]', 'closed'
 
 #Assert back button:
 
@@ -20,6 +23,7 @@ assert_title 'Editing Season: test badass season'
 
 assert_value 'css=#season_name', 'test badass season'
 type 'css=#season_name', 'Foo season'
+select 'season_status', 'open'
 click_and_wait 'submit'
 
 #Assert success page
@@ -32,3 +36,6 @@ click_and_wait 'back'
 
 assert_title 'List of Seasons'
 assert_text_present 'Foo season'
+
+assert_text 'xpath=//table/tbody/tr[2]/td', 'Foo season'
+assert_text 'xpath=//table/tbody/tr[2]/td[2]', 'open'

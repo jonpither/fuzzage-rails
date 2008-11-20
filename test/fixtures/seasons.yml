@@ -3,6 +3,9 @@
  one:
    id: 1
    name: test badass season
-#
-# two:
-#   column: value
+   status: closed
+
+ two:
+   id: 2
+   name: premier league crap
+   status: open

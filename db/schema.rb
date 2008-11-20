@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081120094311) do
+ActiveRecord::Schema.define(:version => 20081120144235) do
 
   create_table "roles", :force => true do |t|
     t.string "name", :null => false
@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(:version => 20081120094311) do
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
   create_table "seasons", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",                           :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",     :default => "open"
   end
 
   create_table "users", :force => true do |t|

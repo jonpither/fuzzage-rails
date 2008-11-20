@@ -1,2 +1,12 @@
 <% @title = 'Administration' %>
-<h1>Fuzzage Admin</h1>
+<div class="post">
+    <div class="title">
+        <h1>Fuzzage Admin</h1>
+    </div>
+    <div class="entry">
+        <h3>Perform the following admin functions:</h3>
+        <ul>
+            <li><%= link_to "Manage Seasons", { :controller => "seasons", :action => "index"}, {:id=> "seasons"} %></li>
+        </ul>
+    </div>
+</div>

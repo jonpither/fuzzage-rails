@@ -1,15 +1,17 @@
 <% @title = 'List of Seasons' %>
 <h1>Listing seasons</h1>
 <post>
-    <table>
+    <table id="seasons">
         <tr>
             <th>Name</th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
 
         <% for season in @seasons %>
             <tr>
                 <td><%= season.name %></td>
+                <td><%= season.status %></td>
                 <td>
                     <%= link_to 'Show', season, :id => "view_season_#{season.id}" %>
                     <%= link_to 'Edit', edit_season_path(season), :id => "edit_season_#{season.id}" %>
