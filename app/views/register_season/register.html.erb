@@ -5,5 +5,12 @@
         <h1>Join: <%= @season.name %></h1>
     </div>
     <div class="entry">
+        <% form_for(@team, :url => { :controller => "register_season", :action => "join" }) do |f| %>
+            <fieldset>
+                <label>Team Name:</label>
+                <%= text_field "team", "name", "maxlength" => 50, "size" => 20, :id => "team_name" %>
+                <input type="submit" value="sign up" id="submit"/>
+            </fieldset>
+        <% end %>
     </div>
 </div>
