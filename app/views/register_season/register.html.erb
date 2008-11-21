@@ -6,6 +6,7 @@
     </div>
     <div class="entry">
         <% form_for(@team, :url => { :controller => "register_season", :action => "join" }) do |f| %>
+            <input type="hidden" name="season_id" value="<%=@season.id%>"/>
             <fieldset>
                 <label>Team Name:</label>
                 <%= text_field "team", "name", "maxlength" => 50, "size" => 20, :id => "team_name" %>

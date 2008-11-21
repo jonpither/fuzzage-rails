@@ -8,6 +8,11 @@ class RegisterSeasonController < ApplicationController
     end
 
     def join
-       redirect_to(:controller => 'home') 
+        @season = Season.find params[:season_id]
+        @team = Team.new(params[:team])
+        @team.season = @season
+        @team.user = session[:user]
+        @team.save
+        redirect_to(:controller => 'home')
     end
 end

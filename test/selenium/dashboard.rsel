@@ -13,3 +13,6 @@ assert_title 'Join Season: premier league crap'
 type "team_name", "Derby warriors"
 click_and_wait 'submit'
 assert_title 'Fuzzage Dashboard'
+
+assert_text_present 'You have teams in action:'
+assert_text_present 'Derby warriors playing in premier league crap'

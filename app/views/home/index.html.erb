@@ -4,19 +4,35 @@
         <h1>Fuzzage Dashboard! </h1>
     </div>
     <div class="entry">
-        <h3>Welcome back <%= session[:user].name %>.
-        <% seasons = open_seasons %>
-        <% if seasons.size > 0 %>
-        There are seasons open that you can join:</h3>
-                <ul>
-                    <% seasons.each do |season| %>
-                        <li>
-                            <label><%=season.name%></label>
-                            => click <%= link_to "here", { :controller => "register_season", :action => "register", :season_id=> season.id}, {:id=> "join-season-#{season.id}"} %> to join.
-                        </li>
-                    <% end %>
-                </ul>
-        <% end %>
+        <h3>Welcome back <%= session[:user].name %>.</h3>
     </div>
+    <% seasons_available = open_seasons %>                          
+    <% if seasons_available.size > 0 %>
+        <div class="entry">
+            There are seasons open that you can join:
+            <ul>
+                <% seasons_available.each do |season| %>
+                    <li>
+                        <label><%= season.name %></label>
+                        =>
+                        click <%= link_to "here", { :controller => "register_season", :action => "register", :season_id=> season.id}, {:id=> "join-season-#{season.id}"} %>
+                        to join.
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <% if session[:user].teams.size > 0 %>
+        <div class="entry">
+            <h3>You have teams in action:</h3>
+            <ul>
+                <% session[:user].teams.each do |team| %>
+                    <li>
+                        <b><%= team.name %></b> playing in <b><%= team.season.name %></b>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
 </div>
 
