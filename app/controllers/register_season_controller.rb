@@ -12,7 +12,11 @@ class RegisterSeasonController < ApplicationController
         @team = Team.new(params[:team])
         @team.season = @season
         @team.user = session[:user]
-        @team.save
-        redirect_to(:controller => 'home')
+        if @team.save
+
+            redirect_to(:controller => 'home')
+        else
+            render :action => "register"
+        end
     end
 end
