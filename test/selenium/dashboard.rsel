@@ -4,3 +4,9 @@ open '/login'
 type 'user_email', 'evil@darktower.com'
 type 'user_password', 'mypassword'
 click_and_wait 'submit'
+
+assert_text_present 'There are seasons open that you can join.'
+assert_text_present 'premier league crap'
+click_and_wait 'join-season-2'
+
+assert_title 'Join Season: premier league crap' 

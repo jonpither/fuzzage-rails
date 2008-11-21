@@ -5,8 +5,17 @@
     </div>
     <div class="entry">
         <h3>Welcome back <%= session[:user].name %>.
-        <% if seasons = open_seasons %>
-        There are seasons open that you can join.</h3>
+        <% seasons = open_seasons %>
+        <% if seasons.size > 0 %>
+        There are seasons open that you can join:</h3>
+                <ul>
+                    <% seasons.each do |season| %>
+                        <li>
+                            <label><%=season.name%></label>
+                            => click <%= link_to "here", { :controller => "register_season", :action => "register", :season_id=> season.id}, {:id=> "join-season-#{season.id}"} %> to join.
+                        </li>
+                    <% end %>
+                </ul>
         <% end %>
     </div>
 </div>

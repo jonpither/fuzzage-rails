@@ -367,3 +367,59 @@ ActionController::RoutingError (No route matches "/selenium/TestRunner.html" wit
     script/server:3
 
 Rendering /home/jpither/work/ruby/fuzzage/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-20 21:22:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b0500f1631a90e5e3071c156f620443d3d6a0ba
+  Parameters: {"action"=>"register", "controller"=>"main"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+Rendering template within layouts/standard
+Rendering main/register
+Completed in 0.08694 (11 reqs/sec) | Rendering: 0.01277 (14%) | DB: 0.00266 (3%) | 200 OK [http://localhost/register]
+
+
+Processing MainController#register (for 127.0.0.1 at 2008-11-20 21:22:19) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYjAyMzhkMGI4ZDkzZGVmMTBlMDQzM2IyMmU2ZjNi
+NTIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--9176cb1c5a1e9f4f2366089bfa5b8dfc0a0e2f77
+  Parameters: {"action"=>"register", "authenticity_token"=>"b2a76343ac5fa9469696f24a0af289543e5f5185", "controller"=>"main", "user"=>{"name"=>"Kath", "confirm_password"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"jon.pither@gmail.com"}}
+Sent mail to jon.pither@gmail.com
+Redirected to http://localhost:3000/main
+Completed in 34.32546 (0 reqs/sec) | DB: 0.00705 (0%) | 302 Found [http://localhost/register]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-20 21:22:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYjAyMzhkMGI4ZDkzZGVmMTBlMDQzM2IyMmU2ZjNi
+NTIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHRg==--559630b7e766ee8069512d08abe465fb5156eb91
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/index
+Completed in 0.00688 (145 reqs/sec) | Rendering: 0.00661 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/main]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-20 21:22:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYjAyMzhkMGI4ZDkzZGVmMTBlMDQzM2IyMmU2ZjNi
+NTIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIgGHVGhhbmsgeW91IGZvciByZWdpc3RlcmluZyEgV2Ug
+aGF2ZSBzZW50IGEgY29uZmlybWF0aW9uIGVtYWlsIHRvIGpvbi5waXRoZXJA
+Z21haWwuY29tIHdpdGggaW5zdHJ1Y3Rpb25zIG9uIGhvdyB0byB2YWxpZGF0
+ZSB5b3VyIGFjY291bnQuBjoKQHVzZWR7BjsHVA==--148454fbaf8b64c4328806823a437c07eae73f6e
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00049 (2053 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/home]
+
+
+Processing MainController#login (for 127.0.0.1 at 2008-11-20 21:22:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYjAyMzhkMGI4ZDkzZGVmMTBlMDQzM2IyMmU2ZjNi
+NTIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIhJQbGVhc2UgbG9nIGluBjoKQHVzZWR7BjsHRg==--e97a55eac046be9a78b505dc730bffe5f730199e
+  Parameters: {"action"=>"login", "controller"=>"main"}
+Rendering template within layouts/standard
+Rendering main/login
+Completed in 0.00666 (150 reqs/sec) | Rendering: 0.00641 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login]
