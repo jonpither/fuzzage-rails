@@ -28,7 +28,7 @@
             <ul>
                 <% session[:user].teams.each do |team| %>
                     <li>
-                        <b><%= team.name %></b> playing in <b><%= team.season.name %></b>
+                        <b><%= team.name %></b> playing in <b><%= link_to "#{team.season.name}", { :controller => "my_season", :season_id=> team.season.id}, {:id=> "my-season-#{team.season.id}"} %></b>
                     </li>
                 <% end %>
             </ul>

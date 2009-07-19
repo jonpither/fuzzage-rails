@@ -1,0 +1,15 @@
+open '/selenium/setup?fixtures=all'
+
+open '/login'
+type 'user_email', 'evil@darktower.com'
+type 'user_password', 'mypassword'
+click_and_wait 'submit'
+
+click_and_wait 'my-season-2'
+
+assert_title 'My Season: premier league crap'
+
+#assert_text_present 'My Fixtures'
+
+#assert_text_present 'Derby County Vs Nottingham Forest'
+

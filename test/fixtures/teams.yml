@@ -1,7 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+ derby:
+   name: Derby County
+   user_id: 3
+   season_id: 2
+
+
+ forest:
+   name: Nottingham Forest
+   user_id: 4
+   season_id: 2
