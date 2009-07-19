@@ -16,10 +16,10 @@ environments:
 
 browsers:
   # Windows
-  firefox: '/usr/bin/firefox'
+  #firefox: '/usr/bin/firefox'
 
   # Mac OS X
-  #firefox: '/Applications/Firefox.app/Contents/MacOS/firefox-bin'
+  firefox: '/Applications/Firefox.app/Contents/MacOS/firefox-bin'
   #safari: '/Applications/Safari.app/Contents/MacOS/Safari'
 
 #host: 'localhost'
