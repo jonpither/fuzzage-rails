@@ -1,8 +1,10 @@
 class MySeasonController < ApplicationController
-    layout "standard"
-    before_filter :authorize
+  layout "standard"
+  before_filter :authorize
 
-    def index
-        @season = Season.find params[:season_id]
-    end
+  def index
+    @team = Team.find params[:team_id]
+    @season = @team.season
+    @fixtures = @team.fixtures
+  end
 end

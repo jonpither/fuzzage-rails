@@ -1,8 +1,10 @@
 class Season < ActiveRecord::Base
-    validates_presence_of :name     #
-    validates_length_of :name, :within => 4..50
+  has_many :teams
 
-    def self.statuses
-        ['open', 'closed']
-    end
+  validates_presence_of :name
+  validates_length_of :name, :within => 4..50
+
+  def self.statuses
+    ['open', 'closed']
+  end
 end

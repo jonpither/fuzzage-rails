@@ -9,7 +9,9 @@ click_and_wait 'my-season-2'
 
 assert_title 'My Season: premier league crap'
 
-#assert_text_present 'My Fixtures'
+assert_text_present 'My Fixtures'
 
-#assert_text_present 'Derby County Vs Nottingham Forest'
+assert_text_present 'Derby County Vs Nottingham Forest'
 
+#Assert size of table
+#TODO test for no fixtures: you have no fixtures
