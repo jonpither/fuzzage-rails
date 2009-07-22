@@ -9,9 +9,32 @@ click_and_wait 'my-season-2'
 
 assert_title 'My Season: premier league crap'
 
-assert_text_present 'My Fixtures'
+assert_text_not_present 'My Results'
 
+assert_text_present 'My Fixtures'
 assert_text_present 'Derby County Vs Nottingham Forest'
 
-#Assert size of table
-#TODO test for no fixtures: you have no fixtures
+#TODO Assert size of fixtures table
+
+click_and_wait 'play-team-2'
+
+assert_title 'Derby County Vs Nottingham Forest'
+
+assert_text_present 'Record Result: Derby County Vs Nottingham Forest'
+
+type 'my_score', '5'
+type 'opponent_score', '0'
+click_and_wait 'submit'
+
+#TODO test for validation (i.e. score must be a numerical 0 <> 99)
+#TODO consider a story for defining scores through the season interface..?
+
+assert_title 'My Season: premier league crap'
+
+assert_text_not_present 'My Fixtures'
+
+assert_text_present 'My Results'
+assert_text_present 'Derby County 5 Nottingham Forest 0'
+
+#TODO Assert size of results table
+

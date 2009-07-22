@@ -1,0 +1,20 @@
+<% @title = "#{@team.name} Vs #{@opponent_team.name}" %>
+<div class="post">
+  <div class="title">
+    <h1>Record Result: <%= "#{@team.name} Vs #{@opponent_team.name}" %></h1>
+  </div>
+  <% form_for(@my_result, :url => { :action => "record_result" }) do |f| %>
+      <input type="hidden" name="home_team_id" value="<%= @team.id %>"/>
+      <input type="hidden" name="away_team_id" value="<%= @opponent_team.id %>"/>
+      <fieldset>
+        <label><%= @team.name %></label>
+        <%= text_field "my_result", "home_score", "maxlength" => 3, "size" => 5, :id => "my_score" %>
+        <br/>
+
+        <label><%= @opponent_team.name %></label>
+        <%= text_field "my_result", "away_score", "maxlength" => 3, "size" => 5, :id => "opponent_score" %>
+        <br/>
+        <p><input type="submit" value="Record!" id="submit"/></p>
+      </fieldset>
+  <% end %>
+</div>

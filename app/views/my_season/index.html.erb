@@ -11,11 +11,15 @@
     <table>
       <tr>
         <th>Fixture</th>
+        <th>&nbsp;&nbsp;</th>
       </tr>
       <% @fixtures.each do |fixture| %>
           <tr>
             <td>
               <b><%= "#{@team.name} Vs #{fixture.team.name}" %></b>
+            </td>
+            <td>
+              <%= link_to "Record Result", { :controller => "my_season", :action => "play_fixture", :season_id=> @season.id, :team_id => @team.id, :opponent_team_id => fixture.team.id} , {:id=> "play-team-#{fixture.team.id}"} %>
             </td>
           </tr>
       <% end %>

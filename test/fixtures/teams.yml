@@ -1,12 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
  derby:
+   id: 1
    name: Derby County
    user_id: 3
    season_id: 2
 
 
  forest:
+   id: 2
    name: Nottingham Forest
    user_id: 4
    season_id: 2
