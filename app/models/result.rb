@@ -1,4 +1,20 @@
 class Result < ActiveRecord::Base
-  belongs_to :home_team, :class_name => 'Team', :foreign_key => :home_team_id
-  belongs_to :away_team, :class_name => 'Team', :foreign_key => :away_team_id
+  has_many :scores, :dependent => :destroy
+  has_many :teams, :through => :scores
+
+  def add_score team, amount
+    scores << Score.new({:score=>amount, :team => team})
+  end
+
+  def get_opponent_score team
+    scores.each {|score|
+      return score if team != score.team;
+    }
+  end
+
+  def get_score team
+    scores.each do |score|      
+      return score if team == score.team;
+    end
+  end
 end

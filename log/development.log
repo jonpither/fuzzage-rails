@@ -263,3 +263,863 @@ Migrating to AddResult (20090722160248)
   [4;36;1mSQL (0.000650)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
   [4;35;1mSQL (0.000617)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
   [4;36;1mSQL (0.000653)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.152567)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000204)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000553)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000232)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000179)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000586)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.078139)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000689)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.118280)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.103382)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000789)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.093858)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000833)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.120509)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001049)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.142967)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001165)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.119895)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001089)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.119780)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.137146)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001064)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000604)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000771)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;35;1mSQL (0.000751)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000694)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000645)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000667)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000696)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000629)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000756)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000599)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000312)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000311)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000309)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000309)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;36;1mSQL (0.000310)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20081121094259)
+  [4;35;1mSQL (0.000311)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddResult (20090722160248)
+  [4;36;1mSQL (0.000311)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000398)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000717)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003095)[0m   [0mSHOW FIELDS FROM `results`[0m
+  [4;36;1mSQL (0.002261)[0m   [0;1mdescribe `results`[0m
+  [4;35;1mSQL (0.000892)[0m   [0mSHOW KEYS FROM `results`[0m
+  [4;36;1mSQL (0.003271)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.003538)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.000951)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002238)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002059)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001015)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.003144)[0m   [0;1mSHOW FIELDS FROM `teams`[0m
+  [4;35;1mSQL (0.002113)[0m   [0mdescribe `teams`[0m
+  [4;36;1mSQL (0.000847)[0m   [0;1mSHOW KEYS FROM `teams`[0m
+  [4;35;1mSQL (0.002213)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002263)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000951)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002079)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001823)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.000843)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.064384)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000186)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000499)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000231)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000460)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.088905)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000491)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.167984)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.113239)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000826)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.094411)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000971)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097441)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000878)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097943)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001158)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.108371)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001102)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.110393)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.113852)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001074)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000654)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000777)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;35;1mSQL (0.000609)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000654)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000670)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000714)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000676)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000154)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.041656)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000428)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000112)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.076076)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000499)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.119765)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.124544)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000790)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.105545)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000846)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.108696)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000892)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.108646)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000936)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.109086)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000774)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.110183)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.103346)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001041)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000592)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000761)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;35;1mSQL (0.000852)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000821)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000693)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000638)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000643)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000650)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000154)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.044892)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000432)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000377)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.074555)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.119036)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.114936)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000786)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.105041)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000844)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097791)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001088)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097044)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000986)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098346)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001235)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097850)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.103708)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001194)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000811)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000724)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;35;1mSQL (0.000886)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000704)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000562)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000700)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000655)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000753)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.009843)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000390)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000392)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.074743)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000500)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.151028)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.114181)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000575)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.116707)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000725)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.109975)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000676)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.109343)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000668)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.099016)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001119)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098050)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.103658)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001034)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000610)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000725)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;35;1mSQL (0.000712)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000716)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000701)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000670)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000666)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;35;1mSQL (0.001022)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000622)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000445)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000525)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000527)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000457)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000456)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;35;1mSQL (0.000506)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;36;1mSQL (0.000481)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;35;1mSQL (0.000520)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAdmin (20081120094311)
+  [4;36;1mSQL (0.000450)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;35;1mSQL (0.000435)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20081121094259)
+  [4;36;1mSQL (0.000434)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddResult (20090722160248)
+  [4;35;1mSQL (0.000494)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddScore (20090723114025)
+  [4;36;1mSQL (0.000503)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.103580)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` int(11) DEFAULT NULL NULL, `team_id` int(11) NOT NULL, `result_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000920)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090723114025')[0m
+  [4;35;1mSQL (0.000594)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001171)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003146)[0m   [0mSHOW FIELDS FROM `results`[0m
+  [4;36;1mSQL (0.002771)[0m   [0;1mdescribe `results`[0m
+  [4;35;1mSQL (0.001309)[0m   [0mSHOW KEYS FROM `results`[0m
+  [4;36;1mSQL (0.002752)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.003055)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001346)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002886)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.002695)[0m   [0;1mdescribe `scores`[0m
+  [4;35;1mSQL (0.001901)[0m   [0mSHOW KEYS FROM `scores`[0m
+  [4;36;1mSQL (0.006209)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.002594)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.001106)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.003131)[0m   [0mSHOW FIELDS FROM `teams`[0m
+  [4;36;1mSQL (0.004219)[0m   [0;1mdescribe `teams`[0m
+  [4;35;1mSQL (0.001123)[0m   [0mSHOW KEYS FROM `teams`[0m
+  [4;36;1mSQL (0.002509)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.003237)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001009)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002685)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002043)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.000971)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.085324)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000405)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000805)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.089271)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `home_score` bigint(11) DEFAULT NULL NULL, `away_score` bigint(11) DEFAULT NULL NULL, `home_team_id` bigint(11) NOT NULL, `away_team_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000525)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.263577)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.115129)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000545)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.105618)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` bigint(11) DEFAULT NULL NULL, `team_id` bigint(11) NOT NULL, `result_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000654)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098291)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000647)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098762)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000695)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098509)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000712)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097856)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000896)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.098993)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.103281)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001168)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000647)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000844)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090723114025')[0m
+  [4;35;1mSQL (0.000724)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000650)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000627)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000725)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000689)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;35;1mSQL (0.000608)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+  [4;36;1mSQL (0.001117)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000644)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000418)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000402)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000399)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000397)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;35;1mSQL (0.000421)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081118140506)
+  [4;36;1mSQL (0.000447)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20081120090421)
+  [4;35;1mSQL (0.000471)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAdmin (20081120094311)
+  [4;36;1mSQL (0.000423)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;35;1mSQL (0.000438)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20081121094259)
+  [4;36;1mSQL (0.000426)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddResult (20090722160248)
+  [4;35;1mSQL (0.000418)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddScore (20090723114025)
+  [4;36;1mSQL (0.000410)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000496)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000852)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002821)[0m   [0mSHOW FIELDS FROM `results`[0m
+  [4;36;1mSQL (0.002348)[0m   [0;1mdescribe `results`[0m
+  [4;35;1mSQL (0.001055)[0m   [0mSHOW KEYS FROM `results`[0m
+  [4;36;1mSQL (0.002678)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.001974)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.001034)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.002386)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.002214)[0m   [0;1mdescribe `scores`[0m
+  [4;35;1mSQL (0.001055)[0m   [0mSHOW KEYS FROM `scores`[0m
+  [4;36;1mSQL (0.002519)[0m   [0;1mSHOW FIELDS FROM `seasons`[0m
+  [4;35;1mSQL (0.002219)[0m   [0mdescribe `seasons`[0m
+  [4;36;1mSQL (0.000962)[0m   [0;1mSHOW KEYS FROM `seasons`[0m
+  [4;35;1mSQL (0.002478)[0m   [0mSHOW FIELDS FROM `teams`[0m
+  [4;36;1mSQL (0.002363)[0m   [0;1mdescribe `teams`[0m
+  [4;35;1mSQL (0.001005)[0m   [0mSHOW KEYS FROM `teams`[0m
+  [4;36;1mSQL (0.002587)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.002156)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000968)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.002524)[0m   [0mSHOW FIELDS FROM `users_roles`[0m
+  [4;36;1mSQL (0.002170)[0m   [0;1mdescribe `users_roles`[0m
+  [4;35;1mSQL (0.000980)[0m   [0mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.022752)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000440)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000124)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000387)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.078618)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.112619)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000468)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000533)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000245)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000205)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000194)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.074861)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000269)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.097857)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000788)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000303)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.098005)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.098769)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.114933)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000897)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002309)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000141)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000246)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000676)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.002427)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000417)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000108)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000225)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email`, `email_confirmed`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin@admin.com', 1)[0m
+  [4;36;1musers_roles Columns (0.002258)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000184)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000660)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000865)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.090428)[0m   [0mALTER TABLE `seasons` ADD `status` varchar(255) DEFAULT 'open'[0m
+  [4;36;1mSQL (0.000832)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120144235')[0m
+Migrating to CreateTeams (20081121094259)
+  [4;35;1mSQL (0.000334)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.115140)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` int(11) NOT NULL, `season_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000821)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081121094259')[0m
+Migrating to AddResult (20090722160248)
+  [4;36;1mSQL (0.000356)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.108636)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000816)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090722160248')[0m
+Migrating to AddScore (20090723114025)
+  [4;35;1mSQL (0.000352)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.108541)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` int(11) DEFAULT NULL NULL, `team_id` int(11) NOT NULL, `result_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000926)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000782)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002339)[0m   [0;1mSHOW FIELDS FROM `results`[0m
+  [4;35;1mSQL (0.001939)[0m   [0mdescribe `results`[0m
+  [4;36;1mSQL (0.001390)[0m   [0;1mSHOW KEYS FROM `results`[0m
+  [4;35;1mSQL (0.001908)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.001872)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.000940)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.002164)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.002165)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (0.000805)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (0.002136)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002026)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.000827)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002184)[0m   [0;1mSHOW FIELDS FROM `teams`[0m
+  [4;35;1mSQL (0.001763)[0m   [0mdescribe `teams`[0m
+  [4;36;1mSQL (0.000809)[0m   [0;1mSHOW KEYS FROM `teams`[0m
+  [4;35;1mSQL (0.002701)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002430)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000884)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002366)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.002633)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.000815)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.042741)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000406)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000128)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000409)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.065713)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000532)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.130671)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.113898)[0m   [0;1mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;35;1mSQL (0.000748)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.105846)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` bigint(11) DEFAULT NULL NULL, `team_id` bigint(11) NOT NULL, `result_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000882)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.109113)[0m   [0;1mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000959)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.108038)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000947)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.099173)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001784)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.119601)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001602)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.107343)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.116122)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.001086)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000662)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.000973)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090723114025')[0m
+  [4;35;1mSQL (0.000658)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;36;1mSQL (0.001159)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;35;1mSQL (0.000731)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;36;1mSQL (0.000555)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;35;1mSQL (0.000906)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;36;1mSQL (0.000779)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;35;1mSQL (0.000758)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000242)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.124136)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000778)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.001391)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.028572)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000396)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000431)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.086562)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.254193)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000770)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000697)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000299)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000300)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000316)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000303)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000403)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.046141)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000906)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000396)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.107708)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001043)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000455)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.107101)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.109743)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.112665)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000786)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000406)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002560)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000191)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000270)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000560)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.002900)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000576)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000166)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000310)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email`, `email_confirmed`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin@admin.com', 1)[0m
+  [4;36;1musers_roles Columns (0.003976)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000298)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000906)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;36;1mSQL (0.000402)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.092463)[0m   [0mALTER TABLE `seasons` ADD `status` varchar(255) DEFAULT 'open'[0m
+  [4;36;1mSQL (0.000926)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120144235')[0m
+Migrating to CreateTeams (20081121094259)
+  [4;35;1mSQL (0.000618)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.138940)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` int(11) NOT NULL, `season_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000859)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081121094259')[0m
+Migrating to AddResult (20090722160248)
+  [4;36;1mSQL (0.000501)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.115664)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000926)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090722160248')[0m
+Migrating to AddScore (20090723114025)
+  [4;35;1mSQL (0.000542)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.129888)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` int(11) DEFAULT NULL NULL, `team_id` int(11) NOT NULL, `result_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001279)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000624)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000984)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002662)[0m   [0;1mSHOW FIELDS FROM `results`[0m
+  [4;35;1mSQL (0.002490)[0m   [0mdescribe `results`[0m
+  [4;36;1mSQL (0.002340)[0m   [0;1mSHOW KEYS FROM `results`[0m
+  [4;35;1mSQL (0.002075)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.002117)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001410)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.002447)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.002089)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (0.000856)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (0.001836)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.001949)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.000941)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.002343)[0m   [0;1mSHOW FIELDS FROM `teams`[0m
+  [4;35;1mSQL (0.003307)[0m   [0mdescribe `teams`[0m
+  [4;36;1mSQL (0.001537)[0m   [0;1mSHOW KEYS FROM `teams`[0m
+  [4;35;1mSQL (0.002036)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001999)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000847)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002016)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.002005)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.000788)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000652)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000389)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.035029)[0m   [0mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;36;1mSQL (0.000368)[0m   [0;1mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000406)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.104961)[0m   [0;1mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000865)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.146291)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.102917)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000706)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.083999)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` bigint(11) DEFAULT NULL NULL, `team_id` bigint(11) NOT NULL, `result_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000777)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.098319)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000960)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.097179)[0m   [0mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000898)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.110021)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000966)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.120861)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001910)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.107926)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.114158)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.001265)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000663)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000763)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000862)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000678)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000722)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;35;1mSQL (0.000673)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000668)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;35;1mSQL (0.000719)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;36;1mSQL (0.000732)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.052258)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000207)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000520)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000182)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000520)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.106616)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.188767)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000674)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000539)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000249)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000192)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000192)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.089094)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000856)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000272)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.131153)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000773)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000268)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.130289)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.145470)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.077874)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000800)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000291)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002095)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000805)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000210)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000420)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.002297)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000488)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000090)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000236)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email`, `email_confirmed`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin@admin.com', 1)[0m
+  [4;36;1musers_roles Columns (0.002006)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001669)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000530)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;36;1mSQL (0.000282)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.111465)[0m   [0mALTER TABLE `seasons` ADD `status` varchar(255) DEFAULT 'open'[0m
+  [4;36;1mSQL (0.000790)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120144235')[0m
+Migrating to CreateTeams (20081121094259)
+  [4;35;1mSQL (0.000522)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.207068)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` int(11) NOT NULL, `season_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000910)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081121094259')[0m
+Migrating to AddResult (20090722160248)
+  [4;36;1mSQL (0.000380)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.150611)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000826)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090722160248')[0m
+Migrating to AddScore (20090723114025)
+  [4;35;1mSQL (0.000502)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.107953)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` int(11) DEFAULT NULL NULL, `team_id` int(11) NOT NULL, `result_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000921)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000563)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001247)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002548)[0m   [0;1mSHOW FIELDS FROM `results`[0m
+  [4;35;1mSQL (0.002263)[0m   [0mdescribe `results`[0m
+  [4;36;1mSQL (0.001246)[0m   [0;1mSHOW KEYS FROM `results`[0m
+  [4;35;1mSQL (0.002581)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.002221)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001395)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.002719)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.002672)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (0.001220)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (0.003056)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002939)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.001627)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.003603)[0m   [0;1mSHOW FIELDS FROM `teams`[0m
+  [4;35;1mSQL (0.002577)[0m   [0mdescribe `teams`[0m
+  [4;36;1mSQL (0.001205)[0m   [0;1mSHOW KEYS FROM `teams`[0m
+  [4;35;1mSQL (0.002477)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002878)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.002012)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002315)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.002227)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001245)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001108)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000634)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000204)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.011974)[0m   [0mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000520)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.072973)[0m   [0;1mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000646)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.141213)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.124546)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000712)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.117368)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` bigint(11) DEFAULT NULL NULL, `team_id` bigint(11) NOT NULL, `result_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000775)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.087193)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000758)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.086683)[0m   [0mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000869)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.098609)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000840)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.109019)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001216)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.119150)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.116306)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.001513)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000862)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000714)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000640)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000747)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;35;1mSQL (0.000690)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000638)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;35;1mSQL (0.000634)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;36;1mSQL (0.000653)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000125)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.034782)[0m   [0;1mDROP DATABASE IF EXISTS `fuzzage_development`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000374)[0m   [0mCREATE DATABASE `fuzzage_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000391)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.081700)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.174064)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000767)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000725)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000302)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000295)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000287)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000286)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000288)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSeasons (20081118083700)
+  [4;36;1mSQL (0.000287)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.062483)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000966)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081118083700')[0m
+Migrating to CreateUsers (20081118140506)
+  [4;35;1mSQL (0.000443)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.119573)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000938)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081118140506')[0m
+Migrating to CreateRoles (20081120090421)
+  [4;36;1mSQL (0.000451)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.119321)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.120415)[0m   [0;1mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `role_id` int(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.146757)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.001323)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120090421')[0m
+Migrating to AddAdmin (20081120094311)
+  [4;35;1mSQL (0.000441)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mRole Columns (0.002655)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000213)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.000280)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.000694)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (0.003050)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000603)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000156)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000274)[0m   [0mINSERT INTO `users` (`name`, `hashed_password`, `email`, `email_confirmed`) VALUES('Administrator', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin@admin.com', 1)[0m
+  [4;36;1musers_roles Columns (0.002725)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.000261)[0m   [0mINSERT INTO `users_roles` (`role_id`, `id`, `user_id`) VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000877)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000748)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081120094311')[0m
+Migrating to AddStatusToSeason (20081120144235)
+  [4;36;1mSQL (0.000464)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.159426)[0m   [0mALTER TABLE `seasons` ADD `status` varchar(255) DEFAULT 'open'[0m
+  [4;36;1mSQL (0.000902)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120144235')[0m
+Migrating to CreateTeams (20081121094259)
+  [4;35;1mSQL (0.000498)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.135320)[0m   [0;1mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` int(11) NOT NULL, `season_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000769)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081121094259')[0m
+Migrating to AddResult (20090722160248)
+  [4;36;1mSQL (0.000488)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.108470)[0m   [0mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000988)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090722160248')[0m
+Migrating to AddScore (20090723114025)
+  [4;35;1mSQL (0.000527)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.084587)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` int(11) DEFAULT NULL NULL, `team_id` int(11) NOT NULL, `result_id` int(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000800)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000568)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001138)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002708)[0m   [0;1mSHOW FIELDS FROM `results`[0m
+  [4;35;1mSQL (0.002371)[0m   [0mdescribe `results`[0m
+  [4;36;1mSQL (0.001397)[0m   [0;1mSHOW KEYS FROM `results`[0m
+  [4;35;1mSQL (0.002302)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.002278)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.001333)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (0.002651)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.002515)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (0.001193)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (0.003004)[0m   [0mSHOW FIELDS FROM `seasons`[0m
+  [4;36;1mSQL (0.002837)[0m   [0;1mdescribe `seasons`[0m
+  [4;35;1mSQL (0.003153)[0m   [0mSHOW KEYS FROM `seasons`[0m
+  [4;36;1mSQL (0.003187)[0m   [0;1mSHOW FIELDS FROM `teams`[0m
+  [4;35;1mSQL (0.002569)[0m   [0mdescribe `teams`[0m
+  [4;36;1mSQL (0.001247)[0m   [0;1mSHOW KEYS FROM `teams`[0m
+  [4;35;1mSQL (0.002466)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.004421)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.001289)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.002336)[0m   [0;1mSHOW FIELDS FROM `users_roles`[0m
+  [4;35;1mSQL (0.002240)[0m   [0mdescribe `users_roles`[0m
+  [4;36;1mSQL (0.001263)[0m   [0;1mSHOW KEYS FROM `users_roles`[0m
+  [4;35;1mSQL (0.001024)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000645)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.010222)[0m   [0mDROP DATABASE IF EXISTS `fuzzage_test`[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mCREATE DATABASE `fuzzage_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000381)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.056245)[0m   [0;1mCREATE TABLE `results` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000645)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.129644)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.092205)[0m   [0mCREATE INDEX `index_roles_on_name` ON `roles` (`name`)[0m
+  [4;36;1mSQL (0.000842)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.082422)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `score` bigint(11) DEFAULT NULL NULL, `team_id` bigint(11) NOT NULL, `result_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000963)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.098213)[0m   [0mCREATE TABLE `seasons` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `status` varchar(255) DEFAULT 'open' NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001021)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.097021)[0m   [0mCREATE TABLE `teams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `user_id` bigint(11) NOT NULL, `season_id` bigint(11) NOT NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001103)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.097882)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL NULL, `hashed_password` varchar(40) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `email_confirmed` tinyint(1) DEFAULT 0 NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000983)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.099108)[0m   [0mCREATE TABLE `users_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` bigint(11) NOT NULL, `role_id` bigint(11) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001605)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.118814)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.122308)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.001104)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000675)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090723114025')[0m
+  [4;36;1mSQL (0.000684)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081118083700')[0m
+  [4;35;1mSQL (0.000743)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081118140506')[0m
+  [4;36;1mSQL (0.000649)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120090421')[0m
+  [4;35;1mSQL (0.000641)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081120094311')[0m
+  [4;36;1mSQL (0.000630)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081120144235')[0m
+  [4;35;1mSQL (0.000628)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081121094259')[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090722160248')[0m

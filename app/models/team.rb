@@ -1,6 +1,9 @@
 class Team < ActiveRecord::Base
   belongs_to :user
-  belongs_to :season
+  belongs_to :season 
+  
+  has_many :scores, :dependent => :destroy
+  has_many :results, :through => :scores
 
   validates_presence_of :name
   validates_length_of :name, :within => 4..50,  :allow_blank => true
@@ -16,6 +19,6 @@ class Team < ActiveRecord::Base
   end
 
   def to_s
-    "#{name}"
+    "#{name}"  
   end
 end

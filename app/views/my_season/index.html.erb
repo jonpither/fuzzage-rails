@@ -6,6 +6,22 @@
   <div class="entry">
     <h3>Welcome back <%= session[:user].name %>.</h3>
   </div>
+  <% if @team.results.length > 0 %>
+  <div class="entry">
+    <h3>My Results</h3>
+    <table>
+      <% @team.scores.each do |score| %>
+          <% my_score = score.result.get_score(@team)
+             opponent_score = score.result.get_opponent_score(@team) %>
+          <tr>
+            <td>
+              <b><%= "#{@team.name} #{my_score.score} #{opponent_score.team.name} #{opponent_score.score}"%></b>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+ <% end %>
   <div class="entry">
     <h3>My Fixtures</h3>
     <table>
