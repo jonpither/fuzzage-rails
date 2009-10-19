@@ -1,11 +1,12 @@
 require 'test_helper'
-require 'mocha'
 
 class MySeasonControllerTest < ActionController::TestCase
-    def setup
-        @user = User.new
-        @user.stubs(:has_role?).returns(true)
-    end
+  fixtures :all
+  
+  def setup
+    @user = User.new
+    @user.stubs(:has_role?).returns(true)
+  end
 
   def test_should_create_result
     #Given
@@ -13,9 +14,9 @@ class MySeasonControllerTest < ActionController::TestCase
     away_team = teams(:forest)
 
     #When:
-    post :record_result, {:home_team_id => home_team.id, :away_team_id => away_team.id}, {:user => @user}
+    post :record_result, {:team_id => home_team.id, :opponent_team_id => away_team.id, :home_score => {:score=>5}, :away_score => {:score=>0}}, {:user => @user}
 
     #Then:
-    #assert_redirected_to index_path(assigns(:season))
+    #assert_redirected_to index_path(assigns(:season)) todo finish this
   end
 end

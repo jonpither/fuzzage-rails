@@ -7,38 +7,40 @@
     <h3>Welcome back <%= session[:user].name %>.</h3>
   </div>
   <% if @team.results.length > 0 %>
-  <div class="entry">
-    <h3>My Results</h3>
-    <table>
-      <% @team.scores.each do |score| %>
-          <% my_score = score.result.get_score(@team)
-             opponent_score = score.result.get_opponent_score(@team) %>
+      <div class="entry">
+        <h3>My Results</h3>
+        <table>
+          <% @team.scores.each do |score| %>
+              <% my_score = score.result.get_score(@team)
+                 opponent_score = score.result.get_opponent_score(@team) %>
+              <tr>
+                <td>
+                  <b><%= "#{@team.name} #{my_score.score} #{opponent_score.team.name} #{opponent_score.score}" %></b>
+                </td>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+  <% end %>
+  <% if @fixtures.length > 0 %>
+      <div class="entry">
+        <h3>My Fixtures</h3>
+        <table>
           <tr>
-            <td>
-              <b><%= "#{@team.name} #{my_score.score} #{opponent_score.team.name} #{opponent_score.score}"%></b>
-            </td>
+            <th>Fixture</th>
+            <th>&nbsp;&nbsp;</th>
           </tr>
-      <% end %>
-    </table>
-  </div>
- <% end %>
-  <div class="entry">
-    <h3>My Fixtures</h3>
-    <table>
-      <tr>
-        <th>Fixture</th>
-        <th>&nbsp;&nbsp;</th>
-      </tr>
-      <% @fixtures.each do |fixture| %>
-          <tr>
-            <td>
-              <b><%= "#{@team.name} Vs #{fixture.team.name}" %></b>
-            </td>
-            <td>
-              <%= link_to "Record Result", { :controller => "my_season", :action => "play_fixture", :season_id=> @season.id, :team_id => @team.id, :opponent_team_id => fixture.team.id} , {:id=> "play-team-#{fixture.team.id}"} %>
-            </td>
-          </tr>
-      <% end %>
-    </table>
-  </div>
+          <% @fixtures.each do |fixture| %>
+              <tr>
+                <td>  <%= "#{@team.has_played(fixture.team)}" %>  <%= "#{fixture.team.has_played(@team)}" %>
+                  <b><%= "#{@team.name} Vs #{fixture.team.name}" %></b>
+                </td>
+                <td>
+                  <%= link_to "Record Result", { :controller => "my_season", :action => "play_fixture", :season_id=> @season.id, :team_id => @team.id, :opponent_team_id => fixture.team.id}, {:id=> "play-team-#{fixture.team.id}"} %>
+                </td>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+  <% end %>
 </div>

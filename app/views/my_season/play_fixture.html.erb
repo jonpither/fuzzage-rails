@@ -1,11 +1,12 @@
 <% @title = "#{@team.name} Vs #{@opponent_team.name}" %>
+<%= error_messages_for 'my_result' %>
 <div class="post">
   <div class="title">
     <h1>Record Result: <%= "#{@team.name} Vs #{@opponent_team.name}" %></h1>
   </div>
   <% form_tag( :action => "record_result" ) do |f| %>
-      <input type="hidden" name="home_team_id" value="<%= @team.id %>"/>
-      <input type="hidden" name="away_team_id" value="<%= @opponent_team.id %>"/>
+      <input type="hidden" name="team_id" value="<%= @team.id %>"/>
+      <input type="hidden" name="opponent_team_id" value="<%= @opponent_team.id %>"/>
       <fieldset>
         <label><%= @team.name %></label>
         <%= text_field "home_score", "score", "maxlength" => 3, "size" => 5, :id => "my_score" %>

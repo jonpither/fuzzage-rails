@@ -7,6 +7,7 @@ click_and_wait 'submit'
 
 assert_text_present 'There are seasons open that you can join'
 assert_text_present 'premier league crap'
+assert_element_present 'join-season-2'
 click_and_wait 'join-season-2'
 assert_title 'Join Season: premier league crap'
 
@@ -27,3 +28,4 @@ assert_title 'Fuzzage Dashboard'
 
 assert_text_present 'You have teams in action:'
 assert_text_present 'Derby warriors playing in premier league crap'
+assert_element_not_present 'join-season-2'

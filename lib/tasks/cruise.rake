@@ -18,6 +18,7 @@ end
 
 task :cruise=> %w[
   db:remigrate
+  spec
   test:units
   test:functionals
   test:integration

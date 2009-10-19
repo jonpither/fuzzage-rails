@@ -6,7 +6,7 @@
     <div class="entry">
         <h3>Welcome back <%= session[:user].name %>.</h3>
     </div>
-    <% seasons_available = open_seasons %>                          
+    <% seasons_available = open_seasons(session[:user]) %>                          
     <% if seasons_available.size > 0 %>
         <div class="entry">
             There are seasons open that you can join:

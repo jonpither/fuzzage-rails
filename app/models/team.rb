@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
   belongs_to :user
-  belongs_to :season 
-  
+  belongs_to :season
+
   has_many :scores, :dependent => :destroy
   has_many :results, :through => :scores
 
@@ -11,14 +11,20 @@ class Team < ActiveRecord::Base
   def fixtures
     fixtures = Array.new
 
-    season.teams.each { | team_in_season |
-      fixtures << SeasonFixture.new(team_in_season) unless team_in_season == self
+    season.teams.each { | team |
+      fixtures << SeasonFixture.new(team) unless (team == self || has_played(team))
     }
 
     fixtures
   end
 
-  def to_s
-    "#{name}"  
+  def has_played team
+    results.each { |result| return true if result.teams.include?(team)}
+    false
   end
+
+  def to_s
+    "#{name}"
+  end
+
 end

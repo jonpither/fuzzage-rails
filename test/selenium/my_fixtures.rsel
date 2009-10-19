@@ -19,22 +19,55 @@ assert_text_present 'Derby County Vs Nottingham Forest'
 click_and_wait 'play-team-2'
 
 assert_title 'Derby County Vs Nottingham Forest'
-
 assert_text_present 'Record Result: Derby County Vs Nottingham Forest'
+
+# TEST FOR VALIDATION - NUMERIC
+
+type 'my_score', 'a'
+type 'opponent_score', '0'
+click_and_wait 'submit'
+
+assert_title 'Derby County Vs Nottingham Forest'
+assert_text_present "Invalid score(s)"
+assert_value 'my_score', 'a'
+assert_value 'opponent_score', '0'
+
+# TEST FOR VALIDATION - BLANK
+
+type 'my_score', '2'
+type 'opponent_score', ''
+click_and_wait 'submit'
+
+assert_title 'Derby County Vs Nottingham Forest'
+assert_text_present "Invalid score(s)"
+assert_value 'my_score', '2'
+assert_value 'opponent_score', ''
+
+# TEST FOR VALIDATION - IN RANGE
+
+type 'my_score', '200'
+type 'opponent_score', '2'
+click_and_wait 'submit'
+
+assert_title 'Derby County Vs Nottingham Forest'
+assert_text_present "Invalid score(s)"
+assert_value 'my_score', '200'
+assert_value 'opponent_score', '2'
+
+# TEST HAPPY PATH
 
 type 'my_score', '5'
 type 'opponent_score', '0'
 click_and_wait 'submit'
 
-#TODO test for validation (i.e. score must be a numerical 0 <> 99)
 #TODO consider a story for defining scores through the season interface..?
 
 assert_title 'My Season: premier league crap'
 
-#assert_text_not_present 'My Fixtures'
+assert_text_not_present 'My Fixtures'
+assert_text_not_present 'Derby County Vs Nottingham Forest'
 
 assert_text_present 'My Results'
 assert_text_present 'Derby County 5 Nottingham Forest 0'
 
 #TODO Assert size of results table
-

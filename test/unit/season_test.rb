@@ -24,4 +24,13 @@ class SeasonTest < ActiveSupport::TestCase
     season.save
     assert season.errors.on(:name)
   end
+
+   def test_season_should_know_its_teams
+    season = Season.new
+    derby = Team.new
+
+    assert !season.has_team?(derby)
+    season.teams << derby
+    assert season.has_team? derby
+  end
 end

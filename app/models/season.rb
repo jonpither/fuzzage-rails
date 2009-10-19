@@ -7,4 +7,9 @@ class Season < ActiveRecord::Base
   def self.statuses
     ['open', 'closed']
   end
+  
+  def has_team? team
+    teams.each { |other_team| return true if team == other_team}
+    false
+  end
 end

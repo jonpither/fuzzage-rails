@@ -31,7 +31,6 @@ class MainController < ApplicationController
             # if the passed hash matches up with a User, confirm him, log him in, set proper flash[:notice], and stop looking
             if confirmation_hash(user.name) == params[:hash] and !user.email_confirmed
                 user.update_attributes(:email_confirmed => true)
-#                session[:user_id] = user.id
                 flash[:notice] = "Thank you for validating your email."
                 break
             end
