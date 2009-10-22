@@ -88,7 +88,7 @@ context "A user (in general)" do
     stubbed_user = User.new
     @user = User.new({:email => 'rolf@rolf.com', :password => 'frodo'})
     Digest::SHA1.expects(:hexdigest).with(@user.password).returns("barf")
-    User.expects(:find).with(:first, :conditions => ["email = ? and hashed_password = ?", "rolf@rolf.com", "barf"]).
+    User.expects(:find).with(:first, :conditions => ["email = ? and hashed_password = ? and email_confirmed = true", "rolf@rolf.com", "barf"]).
             returns(stubbed_user)
 
     #When

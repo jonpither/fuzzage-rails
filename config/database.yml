@@ -39,4 +39,4 @@ production:
   database: fuzzage_production
   username: fuzzage
   password: fuzzage
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock

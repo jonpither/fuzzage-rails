@@ -10,7 +10,7 @@
    id: 2
    name: Figit
    email: darkness@darkness.com
-   hashed_password: foo
+   hashed_password: 91dfd9ddb4198affc5c194cd8ce6d338fde470e2
    email_confirmed: false
 
  confirmed_user_with_teams:

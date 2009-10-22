@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
   def self.login(email, password)
     hashed_password = hash_password(password || '')
     find(:first,
-         :conditions => ["email = ? and hashed_password = ?", email, hashed_password])
+         :conditions => ["email = ? and hashed_password = ? and email_confirmed = true", email, hashed_password])
   end
 
   # hash password for storage in database

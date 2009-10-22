@@ -38,16 +38,36 @@ assert_text_present "Confirm password does not match"
 assert_text_present "Email must be a valid format"
 assert_text_present "Name is too short (minimum is 2 characters)"
 
-# Confirming the registration
+# Confirming cant login before validation
+
+open '/'
+click_and_wait 'login'
+type 'user_email', 'foo@foo.com'
+type 'user_password', 'password'
+click_and_wait 'submit'
+
+assert_title 'Login to Fuzzage'
+assert_text_present "Invalid user/password combination"
+
+# Assert validation
 
 open '/confirm_email/somerandomness'
 assert_title 'Welcome to Fuzzage'
 assert_text_not_present "Thank you for validating your email."
 
-open '/confirm_email/9c4b2fac8156febf4861f3c4c799bbb255a7d076' # Matches unconfirmed user in fixture
+open '/confirm_email/f9bf2bf20b94431dfa9181f4d664c05feae51432' # Matches unconfirmed user in fixture
 assert_title 'Welcome to Fuzzage'
 assert_text_present "Thank you for validating your email."
 
+# Confirming can login after validation
 
+open '/'
+click_and_wait 'login'
+type 'user_email', 'foo@foo.com'
+type 'user_password', 'password'
+click_and_wait 'submit'
+
+assert_title 'Fuzzage Dashboard'
+assert_text_present "Welcome Bob. You are logged in."
 
 

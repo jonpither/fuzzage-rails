@@ -14,6 +14,8 @@ namespace :test do
         FileUtils.rm "db/schema.rb"
         STDOUT.puts `rake db:migrate:reset RAILS_ENV=test`
     }
+
+    task :deploy => ['db:remigrate', 'db:fixtures:load', 'test:stop_mongrel', 'test:start_mongrel']
 end
 
 task :cruise=> %w[
