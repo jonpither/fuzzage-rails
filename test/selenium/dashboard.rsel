@@ -1,7 +1,7 @@
 open '/selenium/setup?fixtures=all'
 
 open '/login'
-type 'user_email', 'evil@darktower.com'
+type 'user_email', 'evil2@darktower.com'
 type 'user_password', 'mypassword'
 click_and_wait 'submit'
 
@@ -29,3 +29,5 @@ assert_title 'Fuzzage Dashboard'
 assert_text_present 'You have teams in action:'
 assert_text_present 'Derby warriors playing in premier league crap'
 assert_element_not_present 'join-season-2'
+
+#better use of fixtures (use diff fixtures for blank - start with zero state - , and pre-populated)

@@ -1,3 +1,5 @@
+#TODO check for duplicate user-email address and forgot password
+
 open '/selenium/setup?fixtures=all'
 
 open '/'
