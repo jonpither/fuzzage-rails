@@ -74,6 +74,30 @@ class TeamTest < ActiveSupport::TestCase
     assert brighton.has_played(forest)
   end
 
+  def test_team_keeps_scores
+    forest = Team.new(:name => 'Florest'); derby = Team.new(:name => 'Derby County'); brighton = Team.new(:name => 'Brighton')
+
+    derby_forest = Result.new({:scores => [Score.new({:team => derby, :score => 5}), Score.new({:team => forest, :score => 0})]})
+    derby_brighton = Result.new({:scores => [Score.new({:team => derby, :score => 1}), Score.new({:team => brighton, :score => 1})]})
+    forest.results << derby_forest
+    derby.results << [derby_forest, derby_brighton]
+    brighton.results << derby_brighton
+
+    assert_equal 0, forest.wins?
+    assert_equal 1, derby.wins?
+
+    assert_equal 1, forest.losses?
+    assert_equal 0, derby.losses?
+
+    assert_equal 1, derby.draws?
+    assert_equal 1, brighton.draws?
+
+    assert_equal 2, derby.played?
+    assert_equal 1, brighton.played?
+    assert_equal 1, forest.played?
+
+  end
+
   private
 
   def create_user

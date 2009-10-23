@@ -9,14 +9,38 @@ click_and_wait 'my-season-2'
 
 assert_title 'My Season: premier league crap'
 
-assert_text_not_present 'My Results'
+# Assert TABLE
 
+assert_text_present 'Season Table'
+
+verify_table 'seasonTable',  '0',  '0',  'Team'
+verify_table 'seasonTable',  '0',  '1',  'Wins'
+verify_table 'seasonTable',  '0',  '2',  'Draws'
+verify_table 'seasonTable',  '0',  '3',  'Losses'
+verify_table 'seasonTable',  '0',  '4',  'Played'
+
+verify_table 'seasonTable',  '1',  '0',  'Derby County'
+verify_table 'seasonTable',  '1',  '1',  '0'
+verify_table 'seasonTable',  '1',  '2',  '0'
+verify_table 'seasonTable',  '1',  '3',  '0'
+verify_table 'seasonTable',  '1',  '4',  '0'
+
+verify_table 'seasonTable',  '2',  '0',  'Nottingham Forest'
+verify_table 'seasonTable',  '2',  '1',  '0'
+verify_table 'seasonTable',  '2',  '2',  '0'
+verify_table 'seasonTable',  '2',  '3',  '0'
+verify_table 'seasonTable',  '2',  '4',  '0'
+
+# Assert FIXTURES
+
+assert_text_not_present 'My Results'
 assert_text_present 'My Fixtures'
 assert_text_present 'Derby County Vs Nottingham Forest'
-
-#TODO Assert size of fixtures table
-
 click_and_wait 'play-team-2'
+
+# TODO Assert size of fixtures table
+
+# Assert PLAY FIXTURE
 
 assert_title 'Derby County Vs Nottingham Forest'
 assert_text_present 'Record Result: Derby County Vs Nottingham Forest'
@@ -69,5 +93,27 @@ assert_text_not_present 'Derby County Vs Nottingham Forest'
 
 assert_text_present 'My Results'
 assert_text_present 'Derby County 5 Nottingham Forest 0'
+
+# Assert TABLE
+
+assert_text_present 'Season Table'
+
+verify_table 'seasonTable',  '0',  '0',  'Team'
+verify_table 'seasonTable',  '0',  '1',  'Wins'
+verify_table 'seasonTable',  '0',  '2',  'Draws'
+verify_table 'seasonTable',  '0',  '3',  'Losses'
+verify_table 'seasonTable',  '0',  '4',  'Played'
+
+verify_table 'seasonTable',  '1',  '0',  'Derby County'
+verify_table 'seasonTable',  '1',  '1',  '1'
+verify_table 'seasonTable',  '1',  '2',  '0'
+verify_table 'seasonTable',  '1',  '3',  '0'
+verify_table 'seasonTable',  '1',  '4',  '1'
+
+verify_table 'seasonTable',  '2',  '0',  'Nottingham Forest'
+verify_table 'seasonTable',  '2',  '1',  '0'
+verify_table 'seasonTable',  '2',  '2',  '0'
+verify_table 'seasonTable',  '2',  '3',  '1'
+verify_table 'seasonTable',  '2',  '4',  '1'
 
 #TODO Assert size of results table

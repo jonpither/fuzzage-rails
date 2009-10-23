@@ -23,6 +23,28 @@ class Team < ActiveRecord::Base
     false
   end
 
+  def wins?
+    wins = 0
+    results.each { |result| wins += 1 if result.get_score(self).greater_than(result.get_opponent_score(self)) }
+    wins
+  end
+
+  def losses?
+    losses = 0
+    results.each { |result| losses += 1 if result.get_score(self).less_than(result.get_opponent_score(self)) }
+    losses
+  end
+
+  def draws?
+    draws = 0
+    results.each { |result| draws += 1 if result.get_score(self).equal_to(result.get_opponent_score(self)) }
+    draws
+  end
+
+  def played?
+    results.length
+  end
+
   def to_s
     "#{name}"
   end

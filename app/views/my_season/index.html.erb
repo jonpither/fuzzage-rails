@@ -6,6 +6,31 @@
   <div class="entry">
     <h3>Welcome back <%= session[:user].name %>.</h3>
   </div>
+  <div class="entry">
+    <h3>Season Table</h3>
+    <table id="seasonTable">
+      <THEAD>
+      <tr>
+        <td>Team</td>
+        <td>Wins</td>
+        <td>Draws</td>
+        <td>Losses</td>
+        <td>Played</td>
+      </tr>
+      </THEAD>
+      <TBODY>
+      <% @season.teams.each do |team| %>
+          <tr>
+            <td><%= "#{team.name}" %></td>
+            <td><%= "#{team.wins?}" %></td>
+            <td><%= "#{team.draws?}" %></td>
+            <td><%= "#{team.losses?}" %></td>
+            <td><%= "#{team.played?}" %></td>
+          </tr>
+      <% end %>
+      </TBODY>
+    </table>
+  </div>
   <% if @team.results.length > 0 %>
       <div class="entry">
         <h3>My Results</h3>
